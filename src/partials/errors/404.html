@@ -1,0 +1,81 @@
+<section class="
+    flex
+    items-center
+    justify-center
+    h-screen
+    min-h-full
+    px-4
+    py-6
+    lg:py-12
+    sm:px-6
+    lg:px-16
+  " id="confetti">
+  <div class="w-full max-w-md space-y-8">
+    <div>
+      <h2 class="text-3xl font-bold text-center text-white lg:text-9xl">404</h2>
+    </div>
+    <div class="max-w-lg text-center lg:mx-auto">
+      <p class="mb-6 text-xl font-light text-santa">
+        Well done Gadget, you found an error.
+      </p>
+    </div>
+    <form class="mt-8 space-y-6" action="#" method="POST">
+      <div>
+        <button type="submit" class="
+            items-center
+            block
+            w-full
+            px-8
+            py-3
+            mx-auto
+            text-base
+            font-medium
+            text-center text-white
+            transition
+            duration-500
+            ease-in-out
+            transform
+            bg-majorelly
+            lg:px-10
+            rounded-xl
+            hover:bg-gov
+            focus:outline-none focus:ring-2 focus:ring-offset-2
+          ">
+          Go back
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<script>
+  var duration = 15 * 1000;
+  var animationEnd = Date.now() + duration;
+  var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  var interval = setInterval(function () {
+    var timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
+    }
+
+    var particleCount = 50 * (timeLeft / duration);
+    // since particles fall down, start a bit higher than random
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      })
+    );
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      })
+    );
+  }, 250);
+</script>

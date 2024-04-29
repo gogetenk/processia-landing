@@ -1,0 +1,170 @@
+<section class="relative w-full">
+  <div class="relative items-center w-full px-5 pt-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
+    <div>
+      <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-0">
+        <div class="sm:flex sm:items-end sm:space-x-5">
+          <div class="flex">
+            <img class="w-12 h-12 rounded-full ring-4 ring-cinder" src="./images/avatar.png" alt="" />
+          </div>
+          <div
+            class="mt-6 sm:flex-1 sm:min-w-0 lg:mt-0 sm:flex sm:items-center sm:justify-end sm:space-x-6 sm:pb-1 lg:pb-0">
+            <div class="flex-1 min-w-0 mt-6 space-y-2 lg:mt-0 sm:hidden md:block">
+              <h3 class="text-xl font-normal leading-snug tracking-tight text-white ">
+                Michael Andreuzza <span class="text-santa">/</span> Billing
+              </h3>
+              <p class="text-sm font-normal text-santa">
+                Manage billing information and view receipts
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative w-full">
+  <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-20 max-w-7xl">
+    <div class="lg:space-y-4 lg:p-6 lg:bg-cinder rounded-3xl">
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-4">
+        {{>"dashboard/nav"}}
+        <div class="space-y-6 lg:col-span-3">
+          <div>
+            <div class="grid grid-cols-1 gap-5 overflow-hidden">
+              <div class="items-center p-6 overflow-hidden text-center rounded-xl bg-pearl">
+                <div class="py-12 space-y-6">
+                  <p class="text-2xl font-bold text-fandango">Pro ( Annual )</p>
+                  <span class="text-sm text-white">
+                    Next payment of $60 (yearly) occurs on May 17, 2022.
+                  </span>
+                  <div>
+                    <button type="submit" class="
+                        px-8
+                        py-2.5
+                        text-base
+                        font-medium
+                        text-center text-white
+                        bg-river
+                        transition
+                        duration-500
+                        ease-in-out
+                        transform
+                        border-2 border-river
+                        rounded-xl
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-offset-2
+                        focus:ring-river
+                        hover:bg-tuna hover:border-tuna
+                      ">
+                      Cancel subscription
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full p-6 bg-pearl rounded-xl">
+            <div class="items-center w-full pb-6 border-b border-river">
+              <h3 class="text-lg font-normal leading-6 text-white">
+                Order history
+              </h3>
+            </div>
+            <div class="mt-4">
+              <div class="flex flex-col lg:col-span-2">
+                <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+                  <div class="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
+                    <div class="overflow-hidden border-b shadow border-tuna sm:rounded-lg">
+                      <table class="min-w-full divide-y divide-tuna">
+                        <thead class="bg-tuna">
+                          <tr>
+                            <th scope="col"
+                              class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-santa">
+                              Date
+                            </th>
+                            <th scope="col"
+                              class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-santa">
+                              Type
+                            </th>
+                            <th scope="col"
+                              class="px-6 py-3 text-xs font-medium tracking-wider text-left uppercase text-santa">
+                              Receipt
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody class="divide-y divide-tuna bg-cinder">
+                          <tr>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                              <div class="flex items-center">
+                                <div class="text-sm font-medium text-white">
+                                  May 17, 2021
+                                </div>
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 whitespace-nowrap">
+                              <div class="text-sm text-white">
+                                Pro Portfolio
+                              </div>
+                            </td>
+                            <td class="px-6 py-4 divide-x whitespace-nowrap">
+                              <a class="inline-flex text-xs font-semibold leading-5 text-moody">
+                                HTML
+                              </a>
+                              <a class="inline-flex pl-2 text-xs font-semibold leading-5 text-moody">
+                                PDF
+                              </a>
+                            </td>
+                          </tr>
+
+                          <!-- More people... -->
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="items-center w-full pb-6 border-b border-river">
+              <h3 class="text-lg font-normal leading-6 text-white">
+                Payment Method On File
+              </h3>
+            </div>
+            <div class="pt-2">
+              <p class="text-sm font-medium text-santa">
+                Currently, you don’t have a credit card on file. You can
+                <a href="./new-card.html" class="text-moody hover:text-white">add a credit card</a>
+                which allows you to easily purchase jobs.
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="items-center w-full pt-8 pb-6 border-b border-river">
+              <h3 class="text-lg font-normal leading-6 text-white">
+                Receipt Info
+                <span class="font-thin text-santa">(optional)</span>
+              </h3>
+            </div>
+            <div class="pt-2">
+              <p class="text-sm font-medium text-santa">
+                Shadow does not provide invoices, but if you need additional
+                contact or tax information added to your receipts
+                <span class="text-white">
+                  contact or tax information added to your receipts (business
+                  address, VAT number, etc.) contact or tax information added to
+                  your receipts </span>, enter it below and it will appear on all of your receipts.
+              </p>
+            </div>
+            <div class="flex gap-2 mt-12">
+              <button type="submit"
+                class="block px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform lg:px-10 tems-center bg-majorelly rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2">
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

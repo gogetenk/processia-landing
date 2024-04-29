@@ -1,0 +1,40 @@
+<header class="w-full text-gray-400 border-b bg-pearl border-cinder">
+  <div x-data="{ open: false }"
+    class="flex flex-col w-full px-4 mx-auto  bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-7xl">
+    <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+      <a href="./index.html" class="text-lg font-semibold rounded-lg  focus:outline-none focus:shadow-outline">
+        {{> "assets/logo" }}
+      </a>
+      <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+        <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+          <path x-show="!open" fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+          <path x-show="open" fill-rule="evenodd"
+            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+            clip-rule="evenodd" style="display: none"></path>
+        </svg>
+      </button>
+    </div>
+    <nav :class="{'flex': open, 'hidden': !open}"
+      class="flex-col items-center flex-grow hidden px-5  md:pb-0 md:flex md:justify-end md:flex-row">
+      <a title="All tailwind templates"
+        class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg  text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+        href="./index.html">
+        Home</a>
+
+      <a title="Wicked templates documentation"
+        class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg  text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+        href="./components.html">Components
+      </a>
+      <a title="frequent questions and answers"
+        class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg  lg:mr-auto text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+        href="./style-guide.html">Style Guide</a>
+      {{>"global/megadropdown"}}
+      <a href="https://wicked-templates.gumroad.com/l/theshadow" title="how it works"
+        class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg  bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+        Buy for $89
+      </a>
+    </nav>
+  </div>
+</header>
