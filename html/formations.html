@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en-US" style="scroll-behavior: smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Primary Meta Tags -->
+    <!--
+    <title>Meta Tags — Preview, Edit and Generate</title>
+    <meta name="title" content="Meta Tags — Preview, Edit and Generate">
+        <meta name="description" content="With Meta Tags you can edit and experiment with your content then preview how your webpage will look on Google, Facebook, Twitter and more!">
+        -->
+    <!-- Open Graph / Facebook -->
+    <!--
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="#">
+        <meta property="og:title" content="Text">
+        <meta property="og:description" content="Text">
+        <meta property="og:image" content="#">
+        -->
+    <!-- Twitter -->
+    <!--
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="#">
+        <meta property="twitter:title" content="Text">
+        <meta property="twitter:description" content="Text">
+        <meta property="twitter:image" content="#">
+        -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Processia - Agence d'expertise en IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gradient-animate {
+            background: linear-gradient(to top right, #44E4FD, #DC49DD, #44E4FD, #DC49DD);
+            background-size: 400% 400%;
+            background-clip: text;
+            text-fill-color: transparent; /* For Safari */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientBackground 5s linear infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-pearl">
+
+    <!-- Header -->
+    <header class="w-full text-gray-400 border-b bg-pearl border-cinder">
+        <div x-data="{ open: false }"
+             class="flex flex-col w-full px-4 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-7xl">
+            <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+                <a href="./index.html" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
+                    <div class="inline-flex items-center">
+                        <img src=".\images\logo.png" class="w-4 h-4 mr-2" />
+                        Processia
+                    </div>
+                </a>
+                <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+                    <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open"
+                              fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                              clip-rule="evenodd"></path>
+                        <path x-show="open"
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                              style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
+                <a title="Services"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="#services">
+                    Services
+                </a>
+
+                <a title="L'équipe"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="#team">
+                    L'équipe
+                </a>
+                <a title="Blog"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="./blog.html">
+                    Blog
+                </a>
+                <a href="#booking"
+                   title="Contact"
+                   class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+                    Contactez-nous
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-nero">
+        <div class="px-4 py-12 mx-auto">
+            <div class="max-w-3xl mx-auto lg:pt-24">
+                <div class="max-w-4xl mx-auto text-lg">
+                    <h1 data-animate="title" class="text-3xl font-bold text-white">
+                        Découvrez nos Programmes de Formation en Intelligence Artificielle
+                    </h1>
+
+                    <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                        Optimisez vos processus métiers et préparez-vous et vos employés pour l'avenir. Nos formations spécialisées vous préparent à intégrer et maîtriser l'IA, augmentant votre productivité et votre compétitivité sur le marché.
+                    </p>
+
+                    <h2 class="text-xl font-bold mt-8 text-white">Initiation à l'IA :</h2>
+                    <span class="text-sm italic text-white/70"> Demi journée possible</span>
+                    <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                        Pour ceux qui débutent, cette journée complète vous immergera dans le monde de l'IA. Vous découvrirez les concepts fondamentaux, les différents types d'IA, et comment ces technologies peuvent être appliquées concrètement dans votre entreprise. Vous repartirez avec une vision claire des opportunités et des défis de l'IA pour votre secteur d'activité. <br />
+                        <div class="my-3 rounded-lg sm:mt-0">
+                            <a href="#tarifs"
+                               class="text-base font-medium text-center text-white transition duration-500 ease-in-out transform rounded-t-none hover:text-flamingo focus:outline-none">
+                                Voir les tarifs &rarr;
+                            </a>
+                        </div>
+                    </p>
+
+                    <h2 class="text-xl font-bold mt-8 text-white">Atelier de Conception IA</h2>
+                    <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                        Destiné à ceux qui ont déjà une base en IA, cet atelier intensif vous permettra de connaître les techniques avancées comme le fine-tuning de modèles d'IA. Vous apprendrez à déployer des solutions open source sur vos systèmes locaux et à créer des automatisations spécifiques répondant à vos besoins.
+                    </p>
+                    <div class="my-3 rounded-lg sm:mt-0">
+                        <a href="#tarifs"
+                           class="text-base font-medium text-center text-white transition duration-500 ease-in-out transform rounded-t-none hover:text-flamingo focus:outline-none">
+                            Voir les tarifs &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full">
+        <div class="relative items-center w-full px-5 py-12 mx-auto lg:py-32 md:px-12 lg:px-16 max-w-7xl">
+            <div class="flex w-full mx-auto text-left">
+                <div class="relative inline-flex items-center m-auto align-middle">
+                    <div class="max-w-3xl space-y-8 lg:text-center">
+                        <h2 data-animate="title" class="mb-4 text-3xl font-bold leading-none text-white lg:text-3xl">Pourquoi investir dans une formation IA ?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6 lg:py-12">
+                <div class="max-w-xl mx-auto lg:max-w-7xl">
+                    <h2 class="sr-only">Title text for screen readers</h2>
+                    <dl class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
+                            <dt class="space-y-8">
+                                <p class="text-xl text-white lg:text-2xl group-hover:text-moody">Autonomie technologique</p>
+                            </dt>
+                            <dd class="mt-2 text-xs lg:text-base text-santa">
+                                <span> Réduisez votre dépendance envers des tiers en maîtrisant les outils d'IA open source. </span>
+                            </dd>
+                        </div>
+                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
+                            <dt class="space-y-8">
+                                <p class="text-xl text-white lg:text-2xl group-hover:text-moody">Avantage compétitif</p>
+                            </dt>
+                            <dd class="mt-2 text-xs lg:text-base text-santa">
+                                <span> Surpassez la concurrence en intégrant l'IA dans vos stratégies commerciales et opérationnelles. </span>
+                            </dd>
+                        </div>
+                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
+                            <dt class="space-y-8">
+                                <p class="text-xl text-white lg:text-2xl group-hover:text-moody">Réduction des coûts</p>
+                            </dt>
+                            <dd class="mt-2 text-xs lg:text-base text-santa">
+                                <span> Automatisez les tâches répétitives et optimisez les processus pour réduire les coûts. </span>
+                            </dd>
+                        </div>
+                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
+                            <dt class="space-y-8">
+                                <p class="text-xl text-white lg:text-2xl group-hover:text-moody">Personnalisation client</p>
+                            </dt>
+                            <dd class="mt-2 text-xs lg:text-base text-santa">
+                                <span> Utilisez l'IA pour offrir des expériences sur mesure à vos clients, améliorant ainsi leur satisfaction et fidélisation. </span>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tarifs">
+        <div class="relative items-center w-full px-5 py-12 mx-auto lg:pb-12 lg:py-0 md:px-12 lg:px-16 max-w-7xl">
+            <div class="relative rounded-xl bg-gradient-to-tr from-[#44E4FD] via-[#DC49DD] to-[#DC49DD] lg:p-10">
+                <div class="relative z-10 p-4 mx-auto max-w-7xl">
+                    <div class="max-w-md mx-auto space-y-4 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+                        <div class="flex flex-col overflow-hidden rounded-xl">
+                            <div class="px-6 py-8 bg-pearl sm:p-10 sm:pb-6">
+                                <div>
+                                    <h3 class="inline-flex px-4 py-1 text-sm font-semibold tracking-wide uppercase text-santa" id="tier-plain">Initiation à l'IA</h3>
+                                </div>
+                                <div class="flex items-baseline mt-4 text-6xl font-extrabold text-white">
+                                    980€
+                                    <span class="ml-1 text-2xl font-medium text-santa"> H.T. </span>
+                                </div>
+                                <p class="mt-5 text-lg text-white">Acquérir les bases de l'IA et comprendre son impact sur les industries pendant une journée complète.</p>
+                            </div>
+                            <div class="flex flex-col justify-between flex-1 px-6 pt-6 pb-8 space-y-6 bg-pearl sm:p-10 sm:pt-6">
+                                <ul role="list" class="space-y-4">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">Bases de l'IA et terminologie</p>
+                                    </li>
+
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">Introduction aux types d'IA</p>
+                                    </li>
+
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">Exemples concrets d'utilisation pour vos employés</p>
+                                    </li>
+                                </ul>
+                                <div class="rounded-md shadow">
+                                    <a href="#"
+                                       class="items-center block px-8 py-2.5 text-base font-medium text-center text-white transition duration-500 ease-in-out transform border-2 border-white rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:bg-white hover:text-majorelly"
+                                       aria-describedby="tier-plain">
+                                        Reserver une initiation
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col overflow-hidden border-2 rounded-xl border-white">
+                            <div class="px-6 py-8 bg-pearl sm:p-10 sm:pb-6">
+                                <div>
+                                    <h3 class="inline-flex px-4 py-1 text-sm font-semibold tracking-wide uppercase text-santa" id="tier-plain">Atelier de Conception IA</h3>
+                                </div>
+                                <div class="flex items-baseline mt-4 text-6xl font-extrabold text-white">
+                                    2200€
+                                    <span class="ml-1 text-2xl font-medium text-santa"> H.T. </span>
+                                </div>
+                                <p class="mt-5 text-lg text-white">Approfondir les techniques de prompting, et le déploiement de modèles open source en local pour les besoins spécifiques de votre entreprise.</p>
+                            </div>
+                            <div class="flex flex-col justify-between flex-1 px-6 pt-6 pb-8 space-y-6 bg-pearl sm:p-10 sm:pt-6">
+                                <ul role="list" class="space-y-4">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">Introduction au fine-tuning</p>
+                                    </li>
+
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">IA open source en local</p>
+                                    </li>
+
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">Prompt engineering</p>
+                                    </li>
+
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0">
+                                            <!-- Heroicon name: outline/check -->
+                                            <svg class="w-6 h-6 text-white"
+                                                 xmlns="http://www.w3.org/2000/svg"
+                                                 fill="none"
+                                                 viewBox="0 0 24 24"
+                                                 stroke="currentColor"
+                                                 aria-hidden="true">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <p class="ml-3 text-base text-santa">Exemple d'automatisation spécifique</p>
+                                    </li>
+                                </ul>
+                                <div class="rounded-md shadow">
+                                    <a href="#"
+                                       class="items-center block w-full px-8 py-3 mx-auto text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-majorelly lg:px-10 rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2"
+                                       aria-describedby="tier-plain">
+                                        Programmer un atelier
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="relative w-full pb-16">
+        <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl">
+            <div class="flex w-full mx-auto text-left">
+                <div class="relative inline-flex items-center m-auto align-middle">
+                    <div class="max-w-3xl space-y-8 lg:text-center">
+                        <h2 data-animate="title" class="mb-4 text-3xl font-bold leading-none text-white lg:text-3xl">Vous hésitez encore ?</h2>
+                        <p class="text-white">Explorez nos études de cas pour voir comment des entreprises comme la vôtre ont transformé leur approche grâce à nos formations en IA. Découvrez des résultats concrets et inspirez-vous pour votre propre parcours.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="py-6 lg:py-12">
+                <div class="max-w-72 mx-auto">
+                    <div class="rounded-md shadow">
+                        <a href="index.html#etudes"
+                           class="items-center block px-8 py-2.5 text-base font-medium text-center text-white transition duration-500 ease-in-out transform border-2 border-white rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:bg-white hover:text-majorelly"
+                           aria-describedby="tier-plain">
+                            Découvrir les études de cas
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="border-t border-tuna bg-cinder" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="text-white xl:col-span-1">
+                    <span class="text-lg font-bold lg:text-2xl">
+                        <div class="inline-flex items-center">
+                            <img src=".\images\logo.png" class="w-6 h-6 mr-2 " />
+                            Processia
+                        </div>
+                    </span>
+                    <p class="w-1/2 mx-auto ml-12 mt-0 text-sm text-santa">Amplifier l'humain</p>
+                    <a href="mailto:contact@processia.tech" class="w-1/2 mx-auto ml-12 mt-4 text-sm text-santa">contact@processia.tech</a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Pages</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="./index.html" class="text-base font-light text-santa hover:text-white"> Home </a>
+                                </li>
+                                <li>
+                                    <a href="./features.html" class="text-base font-light text-santa hover:text-white"> Services </a>
+                                </li>
+                                <li>
+                                    <a href="./about.html" class="text-base font-light text-santa hover:text-white"> L'équipe </a>
+                                </li>
+                                <li>
+                                    <a href="./about.html" class="text-base font-light text-santa hover:text-white"> Blog </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Services</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="./faq.html" class="text-base font-light text-santa hover:text-white"> Formation </a>
+                                </li>
+                                <li>
+                                    <a href="./faq.html" class="text-base font-light text-santa hover:text-white"> Audit </a>
+                                </li>
+                                <li>
+                                    <a href="./faq.html" class="text-base font-light text-santa hover:text-white"> Automatisation  </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="border-t border-tuna bg-cinder">
+        <div class="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+            <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+                <a href="#" class="text-santa hover:text-white">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                              clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-sm text-center text-santa">
+                    Processia ©
+
+                    <span x-text="new Date().getFullYear()"></span>
+                    <a class="text-moody hover:text-white">YT DEVELOPPEMENT</a>
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
