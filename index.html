@@ -11,7 +11,7 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://processia.fr"> 
+    <meta property="og:url" content="https://processia.fr">
     <meta property="og:title" content="Processia - Automatisation et optimisation par l'IA">
     <meta property="og:description" content="Decouvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui ameliorent l'efficacite et stimulent l'innovation.">
     <meta property="og:image" content="https://processia.fr/html/images/fb-og-sm.png">
@@ -22,12 +22,13 @@
     <meta property="twitter:description" content="Découvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui améliorent l'efficacité et stimulent l'innovation.">
     <meta property="twitter:image" content="https://processia.fr/html/images/fb-og-sm.png">
 
-    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" /> 
+    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" />
 
     <link rel="stylesheet" type="text/css" href="html/css/app.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <title>Processia - Agence d'expertise en IA</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <style>
         @keyframes gradientBackground {
             0% {
@@ -48,6 +49,23 @@
             -webkit-text-fill-color: transparent;
             animation: gradientBackground 5s linear infinite;
         }
+
+
+
+
+
+
+
+@keyframes animate-float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
     </style>
 </head>
 
@@ -134,9 +152,16 @@
                     </div>
                 </div>
             </div>
+            <div id="parallax">
+                <!-- Floating Spheres -->
+                <div id="sphere1" class="sphere absolute w-12 h-12 bg-[url('./html/images/sphere1.png')] bg-cover rounded-full animate-[animate-float_10s_ease-in-out_infinite]" data-depth="0.2" style="top: 20%; left: 80%;"></div>
+                <div id="sphere2" class="sphere absolute w-10 h-10 bg-[url('./html/images/sphere2.png')] bg-cover rounded-full animate-[bounce_5s_ease-in-out_infinite]" data-depth="0.3" style="top: 40%; left: 60%;"></div>
+                <div id="sphere3" class="sphere absolute w-8 h-8 bg-[url('./html/images/sphere3.png')] bg-cover rounded-full animate-[animate-float_8s_ease-in-out_infinite]" data-depth="0.4" style="top: 60%; left: 70%;"></div>
+                <div id="sphere4" class="sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.png')] bg-cover rounded-full animate-[bounce_5s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
+                <div id="sphere5" class="sphere absolute w-6 h-6 bg-[url('./html/images/sphere5.png')] bg-cover rounded-full animate-[animate-float_20s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 90%;"></div>
+            </div>
         </div>
     </section>
-
 
     <!-- Services -->
     <section id="services">
@@ -637,7 +662,12 @@
         </div>
     </footer>
 
-    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scene = document.getElementById('scene');
+            var parallaxInstance = new Parallax(scene);
+        });
+    </script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </body>
