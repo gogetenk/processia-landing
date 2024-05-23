@@ -117,8 +117,8 @@
     </header>
 
     <!-- Hero -->
-    <section class="relative w-full min-h-screen py-12 sm:py-10 lg:py-20 bg-[#050010] flex items-center justify-center">
-        <div class="relative items-center w-full px-5 py-24 md:px-12 lg:px-16 lg:py-32 max-w-screen-2xl lg:bg-[url('./html/images/hero.webp')] bg-right bg-contain bg-no-repeat">
+    <section class="relative w-full min-h-screen py-12 sm:py-10 lg:py-20 bg-[#050010] flex-col md:flex items-center justify-center">
+        <div class="relative items-center w-full px-10 md:px-12 lg:px-16 lg:py-32 max-w-screen-2xl lg:bg-[url('./html/images/hero.webp')] bg-right bg-contain bg-no-repeat">
             <div class="w-full text-left">
                 <div class="relative inline-flex m-auto">
                     <div class="max-w-xl lg:max-w-2xl space-y-8 lg:space-y-12">
@@ -150,9 +150,12 @@
                 <div id="sphere1" class="sm:visible invisible sphere absolute w-12 h-12 bg-[url('./html/images/sphere1.webp')] bg-cover rounded-full animate-[animate-float_10s_ease-in-out_infinite]" data-depth="0.2" style="top: 20%; left: 80%;"></div>
                 <div id="sphere2" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere2.webp')] bg-cover rounded-full animate-[bounce_5s_ease-in-out_infinite]" data-depth="0.3" style="top: 40%; left: 60%;"></div>
                 <div id="sphere3" class="sm:visible invisible sphere absolute w-8 h-8 bg-[url('./html/images/sphere3.webp')] bg-cover rounded-full animate-[animate-float_8s_ease-in-out_infinite]" data-depth="0.4" style="top: 60%; left: 70%;"></div>
-                <div id="sphere4" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.webp')] bg-cover rounded-full animate-[bounce_20s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
+                <div id="sphere4" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.webp')] bg-cover rounded-full animate-[bounce_8s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
                 <div id="sphere5" class="sm:visible invisible sphere absolute w-6 h-6 bg-[url('./html/images/sphere5.webp')] bg-cover rounded-full animate-[animate-float_5s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 90%;"></div>
             </div>
+        </div>
+        <div class="max-w-screen-2xl md:hidden">
+            <img src="./html/images/hero.webp" />
         </div>
     </section>
 
@@ -184,7 +187,7 @@
                                                   d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
                                         </svg>
                                     </div>
-                                    <h2 class="text-4xl font-bold leading-snug text-white lg:text-3xl">Formation IA tous niveaux</h2>
+                                    <h2 class="text-2xl font-bold leading-snug text-white lg:text-3xl">Formation IA tous niveaux</h2>
                                     <p class="text-xl font-light text-white text-opacity-60">
                                         Que ce soit en présentiel ou à distance, à travers des séminaires ou des ateliers, nos formations en IA sont conçues pour tous les niveaux. Elles visent à doter vos équipes des compétences nécessaires pour exploiter le plein potentiel de l'intelligence artificielle.
                                     </p>
@@ -222,7 +225,7 @@
                                                   d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
                                         </svg>
                                     </div>
-                                    <h2 class="text-4xl font-bold leading-snug text-white lg:text-3xl">Audit complet</h2>
+                                    <h2 class="text-2xl font-bold leading-snug text-white lg:text-3xl">Audit complet</h2>
                                     <p class="text-xl font-light text-white text-opacity-60">
                                         Comprenez précisément où l'IA peut dynamiser votre activité avec notre audit détaillé. Nous analysons vos process métiers afin identifier de potentiels gains d'efficacité stratégiques et vous proposons le modèle d'IA le plus adapté.
                                     </p>
@@ -260,7 +263,7 @@
                                                   d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
                                         </svg>
                                     </div>
-                                    <h2 class="text-4xl font-bold leading-snug text-white lg:text-3xl">Automatisation sur mesure</h2>
+                                    <h2 class="text-2xl font-bold leading-snug text-white lg:text-3xl">Automatisation sur mesure</h2>
                                     <p class="text-xl font-light text-white text-opacity-60">
                                         Transformez vos processus avec l'IA conçue pour vous. De la simplification par no-code jusqu'à l'implémentation d'APIs sophistiquées, nous élaborons des solutions d'automatisation qui s'intègrent en toute fluidité à vos opérations.
                                     </p>
@@ -360,7 +363,7 @@
     </section>
 
     <!-- Call to action -->
-    <section class="flex w-full max-w-2xl gap-2 my-8 justify-center mx-auto lg:my-12">
+    <section class="flex w-full max-w-2xl gap-2 my-24 justify-center mx-auto lg:my-12">
         <div class="rounded-lg sm:mt-0">
             <a href="#booking"
                class="items-center block px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-majorelly lg:px-10 rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-thick hover:-translate-y-1 hover:scale-110">
@@ -458,15 +461,15 @@
         <div class="px-4 py-24 mx-auto">
             <div class="max-w-6xl mx-auto lg:pt-24">
                 <div class="mx-auto text-lg">
-                    <h1 data-animate="title" class="text-3xl pb-8 font-bold text-white">L'équipe</h1>
-                    <p class="w-full mx-auto mb-8 text-xl font-light text-white text-opacity-60">
+                    <h1 data-animate="title" class="text-3xl pb-8 font-bold text-white text-center">L'équipe</h1>
+                    <p class="w-full mx-auto mb-8 text-xl font-light text-white text-opacity-60 text-center">
                         Il y a moins de 30 ans, internet était une nouvelle technologie encore largement incomprise par le grand public, et peinait à convaincre les professionnels. L'intelligence artificielle était à l'époque un sujet de science-fiction. Aujourd'hui, elle est une réalité.
                     </p>
-                    <p class="w-full mx-auto mb-8 text-xl font-light text-white text-opacity-60">
+                    <p class="w-full mx-auto mb-8 text-xl font-light text-white text-opacity-60 text-center">
                         Chez Processia, nous sommes convaincus que l'intelligence artificielle est une révolution au moins aussi importante que celle d'internet. Tout comme cette dernière,
                         il faudra du temps à cette nouvelle technologie, encore à ses balbutiements, pour être adoptée de tous.<br />
                     </p>
-                    <p class="w-full mx-auto mb-8 text-xl font-light text-white text-opacity-60">
+                    <p class="w-full mx-auto mb-8 text-xl font-light text-white text-opacity-60 text-center">
                         Chaque membre de notre équipe incarne notre mission de démystifier l'IA, de faciliter son adoption et d'utiliser son potentiel pour résoudre des problèmes complexes.
                     </p>
                     <div class="grid grid-cols-2 my-12 gap-y-12 gap-x-6 lg:grid-cols-4">
@@ -549,7 +552,7 @@
                 <div class="flex w-full mx-auto text-left lg:mt-16">
                     <div class="relative inline-flex items-center m-auto align-middle">
                         <div class="space-y-8 max-w-7xl lg:text-center">
-                            <div class="items-start text-left lg:inline-flex">
+                            <div class="items-start text-center lg:inline-flex">
                                 <div class="lg:pr-16">
                                     <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-white lg:text-5xl">Faisons connaissance</h1>
                                 </div>

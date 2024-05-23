@@ -48,6 +48,16 @@
             -webkit-text-fill-color: transparent;
             animation: gradientBackground 5s linear infinite;
         }
+
+        @keyframes animate-float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 
@@ -132,7 +142,7 @@
                 <div id="sphere1" class="sm:visible invisible sphere absolute w-12 h-12 bg-[url('./html/images/sphere1.webp')] bg-cover rounded-full animate-[animate-float_10s_ease-in-out_infinite]" data-depth="0.2" style="top: 20%; left: 80%;"></div>
                 <div id="sphere2" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere2.webp')] bg-cover rounded-full animate-[bounce_5s_ease-in-out_infinite]" data-depth="0.3" style="top: 40%; left: 60%;"></div>
                 <div id="sphere3" class="sm:visible invisible sphere absolute w-8 h-8 bg-[url('./html/images/sphere3.webp')] bg-cover rounded-full animate-[animate-float_8s_ease-in-out_infinite]" data-depth="0.4" style="top: 60%; left: 70%;"></div>
-                <div id="sphere4" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.webp')] bg-cover rounded-full animate-[bounce_20s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
+                <div id="sphere4" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.webp')] bg-cover rounded-full animate-[bounce_8s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
                 <div id="sphere5" class="sm:visible invisible sphere absolute w-6 h-6 bg-[url('./html/images/sphere5.webp')] bg-cover rounded-full animate-[animate-float_5s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 90%;"></div>
             </div>
         </div>

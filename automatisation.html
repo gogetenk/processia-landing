@@ -48,6 +48,16 @@
             -webkit-text-fill-color: transparent;
             animation: gradientBackground 5s linear infinite;
         }
+
+        @keyframes animate-float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 
@@ -56,7 +66,7 @@
     <!-- Header -->
     <header class="w-full text-gray-400 border-b bg-pearl border-cinder">
         <div x-data="{ open: false }"
-             class="flex flex-col w-full px-4 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-7xl">
+             class="flex flex-col w-full px-10 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-screen-2xl">
             <div class="flex flex-row items-center justify-between py-2 lg:py-0">
                 <a href="https://processia.fr" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
                     <div class="inline-flex items-center">
@@ -133,7 +143,7 @@
                 <div id="sphere1" class="sm:visible invisible sphere absolute w-12 h-12 bg-[url('./html/images/sphere1.webp')] bg-cover rounded-full animate-[animate-float_10s_ease-in-out_infinite]" data-depth="0.2" style="top: 20%; left: 80%;"></div>
                 <div id="sphere2" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere2.webp')] bg-cover rounded-full animate-[bounce_5s_ease-in-out_infinite]" data-depth="0.3" style="top: 40%; left: 60%;"></div>
                 <div id="sphere3" class="sm:visible invisible sphere absolute w-8 h-8 bg-[url('./html/images/sphere3.webp')] bg-cover rounded-full animate-[animate-float_8s_ease-in-out_infinite]" data-depth="0.4" style="top: 60%; left: 70%;"></div>
-                <div id="sphere4" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.webp')] bg-cover rounded-full animate-[bounce_20s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
+                <div id="sphere4" class="sm:visible invisible sphere absolute w-10 h-10 bg-[url('./html/images/sphere4.webp')] bg-cover rounded-full animate-[bounce_8s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 70%;"></div>
                 <div id="sphere5" class="sm:visible invisible sphere absolute w-6 h-6 bg-[url('./html/images/sphere5.webp')] bg-cover rounded-full animate-[animate-float_5s_ease-in-out_infinite]" data-depth="0.5" style="top: 80%; left: 90%;"></div>
             </div>
         </div>
@@ -143,14 +153,24 @@
     </section>
 
     <!-- Features -->
+
     <section>
         <div class="overflow-hidden">
-            <div class="py-12 lg:mx-auto lg:max-w-7xl lg:px-16 lg:py-32">
+            <div class="lg:mx-auto lg:max-w-7xl lg:px-16 lg:py-32">
                 <div class="lg:grid lg:grid-cols-3 lg:grid-flow-col-dense lg:gap-24">
-                    <div class="max-w-xl px-5 mx-auto sm:px-6 lg:py-16 lg:max-w-lg lg:mx-0 lg:px-0">
-                        <h1 class="max-w-4xl mt-24 text-5xl font-bold leading-none tracking-tighter text-white lg:text-5xl lg:max-w-xl">Automatisation No-Code</h1>
-                        <p data-animate="subtitle" class="max-w-md mt-6 text-base text-santa sm:text-lg md:mt-5 md:max-w-xl">
-                            Nous employons des outils no-code comme Make ou Zapier pour automatiser efficacement des tâches simples, réduisant ainsi les coûts et les délais de mise en œuvre tout en répondant à votre besoin métier.
+                    <div class="max-w-xl px-10 mx-auto sm:px-6 lg:py-16 lg:max-w-lg lg:mx-0 lg:px-0">
+                        <h1 class="max-w-4xl mt-24 text-4xl font-bold leading-none tracking-tighter text-white lg:text-5xl lg:max-w-xl">
+                            Automatisation No-Code
+                        </h1>
+                        <div class="md:hidden mt-12 rounded-xl sm:mt-16 lg:mt-0">
+                            <div class="md:pl-5 md:-mr-48 px-10 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full shadow-thick rounded-2xl ring-1 ring-pearl ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                                     src="./html/images/feature-no-code.webp"
+                                     alt="Inbox user interface" />
+                            </div>
+                        </div>
+                        <p class="text-base text-santa mt-5 sm:text-lg md:text-xl">
+                            Nous employons des outils no-code comme Make ou Zapier pour automatiser efficacement des tâches simples, réduisant ainsi les coûts et les délais de mise en œuvre tout en répondant à votre besoin métier. <br />
                         </p>
                         <div class="flex w-full max-w-2xl gap-2 mt-6">
                             <div class="my-3 rounded-lg sm:mt-0">
@@ -161,8 +181,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="mt-12 rounded-xl sm:mt-16 lg:mt-0">
-                        <div class="pl-5 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                    <div class="hidden md:block mt-12 rounded-xl sm:mt-16 lg:mt-0">
+                        <div class="md:pl-5 md:-mr-48 px-10 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                             <img class="w-full shadow-thick rounded-2xl ring-1 ring-pearl ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                                  src="./html/images/feature-no-code.webp"
                                  alt="Inbox user interface" />
@@ -174,32 +194,40 @@
     </section>
     <section>
         <div class="overflow-auto">
-            <div class="py-12 lg:mx-auto lg:max-w-7xl lg:px-16 lg:py-32">
+            <div class="pb-10 mb-10 mt-0 lg:mx-auto lg:max-w-7xl lg:px-16 lg:py-32">
                 <div class="lg:grid lg:grid-cols-3 lg:grid-flow-col-dense lg:gap-24">
-                    <div class="mt-12 rounded-xl sm:mt-16 lg:mt-0 lg:col-span-2">
-                        <div class="pr-5 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
-                            <img class="w-full shadow-thick rounded-2xl ring-1 ring-pearl ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
+                    <div class="hidden md:block mt-12 rounded-xl sm:mt-16 lg:mt-0 lg:col-span-2">
+                        <div class="md:pl-5 md:-mr-48 px-10 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                            <img class=" w-full shadow-thick rounded-2xl ring-1 ring-pearl ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
                                  src="./html/images/features-apis.webp"
                                  alt="Inbox user interface" />
                         </div>
                     </div>
-                    <div class="max-w-xl px-5 mx-auto sm:px-6 lg:py-16 lg:max-w-lg lg:mx-0 lg:px-0">
-                        <h1 class="max-w-4xl mt-24 text-5xl font-bold leading-none tracking-tighter text-white lg:text-5xl lg:max-w-xl">Développement spécifique</h1>
-                        <p class="max-w-md mt-6 text-base text-santa sm:text-lg md:mt-5 md:max-w-xl">
-                            Nous développons des solutions personnalisées pour des défis complexes, incluant des automatisations avancées et des APIs sur mesure, alignées avec vos infrastructures internes. La  facturation est basée sur la complexité du projet.
-                        </p>
-                        <div class="flex w-full max-w-2xl gap-2 mt-6">
-                            <div class="my-3 rounded-lg sm:mt-0">
-                                <a href="#booking"
-                                   class="items-center block px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-majorelly lg:px-10 rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-thick">
-                                    Prendre rendez-vous
-                                </a>
+                    <div class="max-w-xl px-10 mx-auto sm:px-6 lg:py-16 lg:max-w-lg lg:mx-0 lg:px-0">
+                        <h1 class="max-w-4xl mt-24 text-4xl font-bold leading-none tracking-tighter text-white lg:text-5xl lg:max-w-xl">
+                            Développement spécifique
+                        </h1>
+                        <div class=" mt-12 rounded-xl sm:mt-16 lg:mt-0">
+                            <div class="md:hidden md:pl-5 md:-mr-48 px-10 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
+                                <img class="w-full shadow-thick rounded-2xl ring-1 ring-pearl ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                                     src="./html/images/features-apis.webp"
+                                     alt="Inbox user interface" />
+                            </div>
+                            <p class="max-w-md mt-6 text-base text-santa sm:text-lg md:mt-5 md:max-w-xl">
+                                Nous développons des solutions personnalisées pour des défis complexes, incluant des automatisations avancées et des APIs sur mesure, alignées avec vos infrastructures internes. La  facturation est basée sur la complexité du projet.
+                            </p>
+                            <div class="flex w-full max-w-2xl gap-2 mt-6">
+                                <div class="my-3 rounded-lg sm:mt-0">
+                                    <a href="#booking"
+                                       class="items-center block px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-majorelly lg:px-10 rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-thick">
+                                        Prendre rendez-vous
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <section class="relative w-full">
@@ -241,7 +269,7 @@
                                 <span> Utilisez des modèles prédictifs pour optimiser la gestion des stocks, réduire les coûts et améliorer la disponibilité des produits. </span>
                             </dd>
                         </div>
-                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
+                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group hidden md:block">
                             <dt class="space-y-8">
                                 <p class="text-xl text-white lg:text-2xl ">Optimisation de la fabrication</p>
                             </dt>
@@ -292,38 +320,11 @@
                                 <span> Automatisez la création de résumés, rapports ou articles en utilisant l'IA pour synthétiser des informations à partir de grandes quantités de données, gagnant du temps et préservant la cohérence. </span>
                             </dd>
                         </div>
-                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
-                            <dt class="space-y-8">
-                                <p class="text-xl text-white lg:text-2xl ">Moteurs de Recherche Contextuels</p>
-                            </dt>
-                            <dd class="mt-2 text-xs lg:text-base text-santa">
-                                <span> Améliorez les moteurs de recherche avec l'IA pour comprendre le contexte des requêtes, offrant des résultats plus pertinents et précis que les solutions de recherche pain-text traditionnelles. </span>
-                            </dd>
-                        </div>
-                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
-                            <dt class="space-y-8">
-                                <p class="text-xl text-white lg:text-2xl ">Optimisation de tournées</p>
-                            </dt>
-                            <dd class="mt-2 text-xs lg:text-base text-santa">
-                                <span> Utilisez l'IA pour optimiser les itinéraires de livraison en temps réel, réduisant les délais, les coûts de carburant et améliorant l'efficacité logistique. </span>
-                            </dd>
-                        </div>
-                        <div class="h-full p-6 bg-cinder lg:p-12 shadow-thick rounded-2xl group">
-                            <dt class="space-y-8">
-                                <p class="text-xl text-white lg:text-2xl ">Détection de fraude</p>
-                            </dt>
-                            <dd class="mt-2 text-xs lg:text-base text-santa">
-                                <span>
-                                    Implémentez des systèmes d'IA pour identifier et prévenir les activités frauduleuses en analysant les modèles de comportement et les transactions en temps réel, renforçant ainsi la sécurité et la confiance.
-                                </span>
-                            </dd>
-                        </div>
                     </dl>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section class="relative w-full pb-16">
         <div class="relative items-center w-full px-5 py-12 mx-auto md:px-12 lg:px-16 max-w-7xl">
