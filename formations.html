@@ -48,6 +48,16 @@
             -webkit-text-fill-color: transparent;
             animation: gradientBackground 5s linear infinite;
         }
+
+        @keyframes animate-float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
     </style>
 </head>
 
@@ -106,7 +116,7 @@
 
     <!-- Hero -->
     <section class="relative w-full min-h-screen py-12 sm:py-10 lg:py-20 bg-[#050010] flex-col md:flex items-center justify-center">
-        <div class="relative items-center w-full px-10 md:px-12 lg:px-16 lg:py-32 max-w-screen-2xl lg:bg-[url('./html/images/hero-formation.webp')] bg-right bg-contain bg-no-repeat">
+        <div class="relative items-center w-full px-10 md:px-12 lg:px-16 lg:py-32 max-w-screen-2xl md:bg-[url('./html/images/hero-formation.webp')] bg-right bg-contain bg-no-repeat">
             <div class="w-full text-left">
                 <div class="relative inline-flex m-auto">
                     <div class="max-w-xl lg:max-w-2xl space-y-8 lg:space-y-12">
