@@ -79,21 +79,26 @@
                 </button>
             </div>
             <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
-                <a title="Services"
+                <a title="Home"
                    class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                   href="index.html#services">
-                    Services
+                   href="index.html">
+                    Home
                 </a>
 
-                <a title="L'équipe"
+                <a title="Formation"
                    class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                   href="index.html#team">
-                    L'équipe
+                   href="formations.html">
+                    Formation
                 </a>
-                <a title="Blog"
+                <a title="Audit"
                    class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
-                   href="blog.html">
-                    Blog
+                   href="audit.html">
+                    Audit
+                </a>
+                <a title="Automatisation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="automatisation.html">
+                    Automatisation
                 </a>
                 <a href="#booking"
                    title="Contact"
@@ -283,9 +288,10 @@
         </div>
     </section>
 
+    <!-- Call to action -->
     <section id="booking" class="relative w-full bg-gradient-to-tr from-[#44E4FD] via-[#DC49DD] to-[#DC49DD]">
         <section class="relative w-full">
-            <div class="relative items-center w-full px-5 py-12 mx-auto md:pt-12 lg:px-16 max-w-7xl">
+            <div class="relative items-center w-full px-10 py-12 mx-auto md:pt-12 lg:px-16 max-w-7xl">
                 <div class="flex w-full mx-auto text-left lg:mt-16">
                     <div class="relative inline-flex items-center m-auto align-middle">
                         <div class="space-y-8 max-w-7xl lg:text-center">
@@ -304,7 +310,7 @@
                 </div>
             </div>
         </section>
-        <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
+        <div class="relative items-center w-full px-5 pb-24 mx-auto md:px-12 lg:px-8 max-w-7xl">
             <!-- Calendly inline widget begin -->
             <div class="calendly-inline-widget" data-url="https://calendly.com/embed-demo-sales/discovery-call" style="position: relative;min-width:320px;height:800px;" data-processed="true">
                 <div class="calendly-spinner">
@@ -317,9 +323,10 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="border-t border-tuna bg-cinder" aria-labelledby="footer-heading">
         <h2 id="footer-heading" class="sr-only">Footer</h2>
-        <div class="px-4 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
+        <div class="px-10 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
                 <div class="text-white xl:col-span-1">
                     <span class="text-lg font-bold lg:text-2xl">
@@ -328,48 +335,47 @@
                             Processia
                         </div>
                     </span>
-                    <p class="w-1/2 mx-auto ml-12 mt-0 text-sm text-santa">Amplifier l'humain</p>
-                    <a href="mailto:contact@processia.tech" class="w-1/2 mx-auto ml-12 mt-4 text-sm text-santa">contact@processia.tech</a>
+                    <p class="w-1/2 mt-0 text-sm text-santa">Amplifier l'humain</p>
+                    <a href="mailto:contact@processia.tech" class="w-1/2 mx-auto -4 text-sm text-santa">contact@processia.fr</a>
                 </div>
                 <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
                     <div class="md:grid md:grid-cols-2 md:gap-8">
                         <div>
-                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Pages</h3>
+                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Home</h3>
                             <ul role="list" class="mt-4 space-y-4">
                                 <li>
                                     <a href="./index.html" class="text-base font-light text-santa hover:text-white"> Home </a>
                                 </li>
                                 <li>
-                                    <a href="./features.html" class="text-base font-light text-santa hover:text-white"> Services </a>
+                                    <a href="#services" class="text-base font-light text-santa hover:text-white"> Services </a>
                                 </li>
                                 <li>
-                                    <a href="./about.html" class="text-base font-light text-santa hover:text-white"> L'équipe </a>
+                                    <a href="#team" class="text-base font-light text-santa hover:text-white"> L'équipe </a>
                                 </li>
                                 <li>
-                                    <a href="./about.html" class="text-base font-light text-santa hover:text-white"> Blog </a>
+                                    <a href="./blog.html" class="text-base font-light text-santa hover:text-white"> Blog </a>
                                 </li>
                             </ul>
                         </div>
-                        <div class="mt-12 md:mt-0">
-                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Services</h3>
-                            <ul role="list" class="mt-4 space-y-4">
-                                <li>
-                                    <a href="./faq.html" class="text-base font-light text-santa hover:text-white"> Formation </a>
-                                </li>
-                                <li>
-                                    <a href="./faq.html" class="text-base font-light text-santa hover:text-white"> Audit </a>
-                                </li>
-                                <li>
-                                    <a href="./faq.html" class="text-base font-light text-santa hover:text-white"> Automatisation  </a>
-                                </li>
-                            </ul>
-                        </div>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Services</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./formations.html" class="text-base font-light text-santa hover:text-white"> Formation </a>
+                            </li>
+                            <li>
+                                <a href="./audit.html" class="text-base font-light text-santa hover:text-white"> Audit </a>
+                            </li>
+                            <li>
+                                <a href="./automatisation.html" class="text-base font-light text-santa hover:text-white"> Automatisation  </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-
     <footer class="border-t border-tuna bg-cinder">
         <div class="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
             <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
@@ -388,7 +394,7 @@
                     Processia ©
 
                     <span x-text="new Date().getFullYear()"></span>
-                    <a class="text-moody hover:text-white">YT DEVELOPPEMENT</a>
+                    <span class="text-moody hover:text-white">YT DEVELOPPEMENT</span>
                     All rights reserved.
                 </p>
             </div>
