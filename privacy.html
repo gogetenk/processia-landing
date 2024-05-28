@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Processia est une agence d'expertise en IA spécialisée dans l'automatisation des processus métiers et l'optimisation des performances via des solutions personnalisées d'intelligence artificielle.">
+    <meta name="keywords" content="IA, automatisation, optimisation, intelligence artificielle, transformation digitale, solutions IA">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://processia.fr">
+    <meta property="og:title" content="Processia - Automatisation et optimisation par l'IA">
+    <meta property="og:description" content="Decouvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui ameliorent l'efficacite et stimulent l'innovation.">
+    <meta property="og:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://processia.fr">
+    <meta property="twitter:title" content="Processia - Automatisation et optimisation par l'IA">
+    <meta property="twitter:description" content="Découvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui améliorent l'efficacité et stimulent l'innovation.">
+    <meta property="twitter:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+
+    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="html/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Processia - Agence d'expertise en IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <style>
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gradient-animate {
+            background: linear-gradient(to top right, #44E4FD, #DC49DD, #44E4FD, #DC49DD);
+            background-size: 400% 400%;
+            background-clip: text;
+            text-fill-color: transparent; /* For Safari */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientBackground 5s linear infinite;
+        }
+
+        @keyframes animate-float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-pearl">
+    <!-- Header -->
+    <header class="w-full text-gray-400 border-b bg-pearl border-cinder">
+        <div x-data="{ open: false }"
+             class="flex flex-col w-full py-2 px-10 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-screen-2xl">
+            <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+                <a href="https://processia.fr" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
+                    <div class="inline-flex items-center text-white">
+                        <img src=".\html\images\logo.webp" class="w-4 h-4 mr-2" />
+                        Processia
+                    </div>
+                </a>
+                <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+                    <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open"
+                              fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                              clip-rule="evenodd"></path>
+                        <path x-show="open"
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                              style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
+                <a title="Home"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="index.html">
+                    Home
+                </a>
+
+                <a title="Formation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="formations.html">
+                    Formation
+                </a>
+                <a title="Audit"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="audit.html">
+                    Audit
+                </a>
+                <a title="Automatisation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="automatisation.html">
+                    Automatisation
+                </a>
+                <a href="#booking"
+                   title="Contact"
+                   class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+                    Contactez-nous
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative w-full">
+        <div class="relative items-center w-full px-5 py-12 mx-auto lg:py-32 md:px-12 lg:px-16 max-w-7xl">
+            <div class="lg:grid lg:grid-cols-3 lg:gap-8 lg:px-2">
+                <div>
+                    <h2 class="text-3xl font-bold text-white">Mentions légales</h2>
+                </div>
+                <div class="mt-12 lg:mt-0 lg:col-span-2">
+                    <main class="flex-auto bg-nero">
+                        <div class="max-w-2xl mx-auto">
+                            <h2 class="text-lg font-medium leading-6 text-white lg:text-2xl">Éditeur du site</h2>
+                            <p class="mt-2 text-lg text-santa">
+                                YT DEVELOPPEMENT<br>
+                                Forme juridique : Société par actions simplifiée unipersonnelle (SASU)<br>
+                                Adresse : 2 Rue du Poumpidou, 34990 Juvignac, France<br>
+                                SIREN : 821 155 868<br>
+                                Capital social : 1 000,00 €<br>
+                                Numéro TVA intracommunautaire : FR35821155868<br>
+                                Numéro RCS : 821 155 868 R.C.S. Montpellier<br>
+                                Activité principale : Développement informatique (Code NAF ou APE 63.11Z)<br>
+                                Site web : <a href="https://processia.fr" class="text-cyan-600 hover:underline">https://processia.fr</a><br>
+                            </p>
+                            <h2 class="mt-12 text-lg font-medium leading-6 text-white lg:text-2xl">Directeur de la publication</h2>
+                            <p class="mt-2 text-lg text-santa">
+                                Marius Brunet<br>
+                                Email : <a href="mailto:mariusbrunet25@gmail.com" class="text-cyan-600 hover:underline">https://processia.fr</a><br>
+                                Téléphone : +33 695929150<br>
+                            </p>
+                            <h2 class="mt-12 text-lg font-medium leading-6 text-white lg:text-2xl">Hébergement du site</h2>
+                            <p class="mt-2 text-lg text-santa">
+                                Le site est hébergé par Netlify, Inc.<br>
+                                Adresse : 2325 3rd Street, Suite 215, San Francisco, CA 94107, USA<br>
+                                Site web : <a href="https://www.netlify.com/" class="text-cyan-600 hover:underline">https://www.netlify.com/</a><br>
+                            </p>
+                            <h2 class="mt-12 text-lg font-medium leading-6 text-white lg:text-2xl">Conditions générales de ventes</h2>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">1. Préambule</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Ces conditions générales de vente régissent exclusivement les relations entre la société YT DEVELOPPEMENT, société par actions simplifiée, SIREN 821 155 868, située au 2 Rue du Poumpidou, 34990 Juvignac, France (ci-après "le Prestataire") et les clients (ci-après "le Client") utilisant les services SaaS proposés sur le site [URL du site web du client].
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">2. Objet</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les présentes CGV définissent les conditions dans lesquelles le Prestataire fournit les services aux Clients via sa plateforme SaaS. Les services peuvent inclure, sans s'y limiter, l'accès à des logiciels en ligne, des fonctionnalités de gestion de données, et des outils d'analyse.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">3. Accès au Service</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le service est accessible au Client 24/7, sauf en cas de maintenance programmée ou d’urgence. Le Prestataire s’efforce de fournir une qualité d’accès optimale mais ne s’engage pas sur une obligation de résultat concernant l’accès au service.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">4. Accès au Service après vente</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le service est accessible au Client du lundi au vendredi de 12h à 18h (UTC+2) uniquement par mail, sauf en cas de maintenance programmée ou d’urgence.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">5. Tarifs</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les prix des services sont indiqués sur le site web et peuvent être révisés à tout moment avec un préavis donné au Client. Les tarifs sont exprimés en euros et toutes taxes.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">6. Paiement</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le paiement du service s'effectue sur une base ponctuelle, selon le plan choisi par le Client. Les factures sont payables à 30 jours net, par virement bancaire ou tout autre moyen accepté par le Prestataire.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">7. Durée et Résiliation</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les services sont souscrits pour une durée indéterminée ou déterminée selon le contrat signé. Le Client peut résilier le contrat en respectant un préavis de 30 jours avant la date d'échéance prévue. En cas de non-respect des termes des CGV, le Prestataire peut suspendre ou résilier le service sans préavis.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">8. Obligations du Prestataire</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le Prestataire s'engage à fournir les services conformément aux lois en vigueur et à agir avec professionnalisme. Il garantit la confidentialité des données du Client conformément à la réglementation sur la protection des données personnelles.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">9. Obligations du Client</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le Client s'engage à utiliser les services conformément aux instructions du Prestataire et à ne pas porter atteinte aux droits de propriété intellectuelle du Prestataire ou d'autres clients.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">10. Propriété intellectuelle</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le Prestataire détient tous les droits de propriété intellectuelle relatifs au service. L'utilisation du service ne confère au Client aucun droit sur le contenu du service, à l'exception de l'utilisation accordée sous licence.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">11. Confidentialité</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les parties s'engagent à garder confidentielles les informations échangées dans le cadre de l'utilisation des services.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">12. Force Majeure</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Aucune des parties ne sera responsable de la non-exécution totale ou partielle de ses obligations si cette non-exécution est provoquée par un événement constituant une force majeure.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">13. Litiges</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Tout litige relatif à l'interprétation ou à l'exécution des présentes CGV sera soumis aux tribunaux compétents du ressort de Montpellier.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">14. Modifications des CGV</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le Prestataire se réserve le droit de modifier les présentes CGV à tout moment. Les modifications entreront en vigueur immédiatement après leur publication sur le site.
+                            </p>
+
+                            <h2 class="mt-12 text-lg font-medium leading-6 text-white lg:text-2xl">Conditions Générales d'Utilisation (CGU)</h2>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">
+                                1. Préambule
+                            </h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Ces conditions générales d'utilisation (CGU) s'appliquent à tous les utilisateurs du site web et des services associés fournis par YT DEVELOPPEMENT, situé à 2 Rue du Poumpidou, 34990 Juvignac, France. En accédant au site et en utilisant les services, vous acceptez d'être lié par ces CGU.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">2. Accès au site</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le site est accessible gratuitement à tout utilisateur disposant d'un accès internet. Tous les coûts afférents à l'accès, que ce soient les frais matériels, logiciels ou d'accès à internet, sont exclusivement à la charge de l'utilisateur. Le prestataire se réserve le droit de refuser l'accès au site à tout utilisateur ne respectant pas les présentes CGU.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">3. Propriété intellectuelle</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les contenus du site, incluant mais ne se limitant pas aux textes, graphiques, images, logos et icônes, sont la propriété exclusive de la société YT DEVELOPPEMENT, à l'exception des marques, logos ou contenus appartenant à d'autres sociétés partenaires ou auteurs. Toute reproduction, distribution, modification, adaptation, retransmission ou publication, même partielle, de ces différents éléments est strictement interdite sans l'accord exprès par écrit de YT DEVELOPPEMENT.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">4. Gestion du site</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Pour la bonne gestion du site, l'éditeur pourra à tout moment :
+                            </p>
+                            <ul class="mt-4 space-y-4 list-disc list-inside text-santa">
+                                <li>Suspendre, interrompre ou limiter l'accès à tout ou partie du site, réserver l'accès au site, ou à certaines parties du site, à une catégorie déterminée d’utilisateur;</li>
+                                <li>Supprimer toute information pouvant en perturber le fonctionnement ou entrant en contravention avec les lois nationales ou internationales;</li>
+                                <li>Suspendre le site afin de procéder à des mises à jour.</li>
+                            </ul>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">5. Responsabilités</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les informations et services disponibles sur le site sont fournis en l'état, sans aucune garantie de disponibilité ou de continuité. YT DEVELOPPEMENT n'est pas responsable des dommages directs ou indirects causés au matériel de l'utilisateur, lors de l'accès au site web de YT DEVELOPPEMENT, et résultant soit de l'utilisation d'un matériel ne répondant pas aux spécifications indiquées, soit de l'apparition d'un bug ou d'une incompatibilité.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">6. Collecte de données</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le site est susceptible de collecter les données personnelles de ses utilisateurs. La collecte et le traitement de ces données personnelles se font dans le respect de la vie privée conformément à la loi applicable en matière de protection des données personnelles. Chaque utilisateur dispose d'un droit d'accès, de rectification et d'opposition aux données personnelles le concernant.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">7. Liens hypertextes</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le site peut contenir des liens hypertextes vers d’autres sites. Cependant, YT DEVELOPPEMENT n’a pas la possibilité de vérifier le contenu de ces sites, et n’assumera aucune responsabilité de ce fait.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">8. Modifications des CGU</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                YT DEVELOPPEMENT se réserve le droit de modifier les clauses de ces conditions générales d’utilisation à tout moment et sans justification.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">9. Durée du contrat</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Le présent contrat est valable pour une durée indéterminée. Le début de l'utilisation des services du site marque l'acceptation des conditions générales d'utilisation par l'utilisateur.
+                            </p>
+                            <h3 class="mt-6 text-lg font-medium leading-6 text-white lg:text-xl">10. Droit applicable et juridiction compétente</h3>
+                            <p class="mt-2 text-lg text-santa">
+                                Les présentes CGU sont régies par la loi française. En cas de désaccord persistant sur l'application ou l'interprétation de ces termes, et après l'échec de toute tentative de recherche d'une solution amiable, les tribunaux français seront seuls compétents pour connaître de ce litige.
+                            </p>
+
+                            <h2 class="mt-12 text-lg font-medium leading-6 text-white lg:text-2xl">Politique de confidentialité</h2>
+                            <p class="mt-2 text-lg text-santa">
+                                Nous accordons une grande importance à la protection de la confidentialité et des données personnelles de nos utilisateurs. Les informations personnelles recueillies peuvent inclure des noms, des adresses électroniques et des numéros de téléphone, nécessaires à la gestion de votre compte et à l'exécution de vos commandes. Nous utilisons également des cookies pour améliorer votre expérience sur notre site, pour analyser le trafic et pour personnaliser le contenu et les annonces. Vous avez le droit de consulter, modifier ou supprimer vos informations personnelles à tout moment.
+                            </p>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-tuna bg-cinder" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="px-10 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="text-white xl:col-span-1">
+                    <span class="text-lg font-bold lg:text-2xl">
+                        <div class="inline-flex items-center">
+                            <img src=".\html\images\logo.webp" class="w-6 h-6 mr-2 " />
+                            Processia
+                        </div>
+                    </span>
+                    <p class="w-1/2 mt-0 text-sm text-santa">Amplifier l'humain</p>
+                    <a href="mailto:contact@processia.tech" class="w-1/2 mx-auto -4 text-sm text-santa">contact@processia.fr</a>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-3 gap-8 mt-12 xl:mt-0 xl:col-span-2">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Home</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="./index.html" class="text-base font-light text-santa hover:text-white"> Home </a>
+                                </li>
+                                <li>
+                                    <a href="#services" class="text-base font-light text-santa hover:text-white"> Services </a>
+                                </li>
+                                <li>
+                                    <a href="#team" class="text-base font-light text-santa hover:text-white"> L'équipe </a>
+                                </li>
+                                <li>
+                                    <a href="./blog.html" class="text-base font-light text-santa hover:text-white"> Blog </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Services</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./formations.html" class="text-base font-light text-santa hover:text-white"> Formation </a>
+                            </li>
+                            <li>
+                                <a href="./audit.html" class="text-base font-light text-santa hover:text-white"> Audit </a>
+                            </li>
+                            <li>
+                                <a href="./automatisation.html" class="text-base font-light text-santa hover:text-white"> Automatisation  </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Légal</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./privacy.html" class="text-base font-light text-santa hover:text-white"> Mentions légales & CGV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="border-t border-tuna bg-cinder">
+        <div class="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+            <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+                <a href="#" class="text-santa hover:text-white">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                              clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-sm text-center text-santa">
+                    Processia ©
+
+                    <span x-text="new Date().getFullYear()"></span>
+                    <span class="text-moody hover:text-white">YT DEVELOPPEMENT</span>
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
