@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Processia est une agence d'expertise en IA spécialisée dans l'automatisation des processus métiers et l'optimisation des performances via des solutions personnalisées d'intelligence artificielle.">
+    <meta name="keywords" content="IA, automatisation, optimisation, intelligence artificielle, transformation digitale, solutions IA">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://processia.fr">
+    <meta property="og:title" content="Processia - Automatisation et optimisation par l'IA">
+    <meta property="og:description" content="Decouvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui ameliorent l'efficacite et stimulent l'innovation.">
+    <meta property="og:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://processia.fr">
+    <meta property="twitter:title" content="Processia - Automatisation et optimisation par l'IA">
+    <meta property="twitter:description" content="Découvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui améliorent l'efficacité et stimulent l'innovation.">
+    <meta property="twitter:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+
+    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../html/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Processia - Agence d'expertise en IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-pearl">
+
+    <!-- Header -->
+    <header class="w-full text-gray-400 border-b bg-pearl border-cinder fixed z-10">
+        <div x-data="{ open: false }"
+             class="flex flex-col w-full py-2 px-10 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-screen-2xl">
+            <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+                <a href="https://processia.fr" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
+                    <div class="inline-flex items-center text-white">
+                        <img src="..\html\images\logo.webp" class="w-4 h-4 mr-2" />
+                        Processia
+                    </div>
+                </a>
+                <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+                    <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open"
+                              fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                              clip-rule="evenodd"></path>
+                        <path x-show="open"
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                              style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
+                <a title="Home"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="index.html">
+                    Home
+                </a>
+
+                <a title="Formation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="formations.html">
+                    Formation
+                </a>
+                <a title="Audit"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="audit.html">
+                    Audit
+                </a>
+                <a title="Automatisation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="automatisation.html">
+                    Automatisation
+                </a>
+                <a title="Blog"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="blog.html">
+                    Blog
+                </a>
+                <a href="#booking"
+                   title="Contact"
+                   class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+                    Contactez-nous
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-nero">
+        <div class="px-4 py-12 mx-auto">
+            <div class="max-w-4xl mx-auto lg:pt-24">
+
+                <div class="max-w-3xl mx-auto text-lg text-left">
+                    <div class="space-y-8">
+                        <div class="container mx-auto px-4 py-10">
+                            <h1 data-animate="title" class="py-10 text-4xl font-bold leading-none tracking-tighter text-center text-white lg:text-6xl">
+                                RAG ou Fine-tuning : lequel choisir ?
+                            </h1>
+
+                            <a href="#" class="flex-shrink-0 w-full mx-auto mt-12 text-left group">
+                                <div class="flex items-center justify-center mx-auto">
+                                    <div>
+                                        <img class="inline-block rounded-full h-9 w-9"
+                                             src="..\html\images\marius.webp"
+                                             alt="" />
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-santa group-hover:text-white">Marius BRUNET</p>
+                                        <p class="text-xs font-medium text-santa group-hover:text-white">29 Mai 2024</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <p class="text-base text-center text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Découvrez les différences clés entre le Retrieval Augmented Generation (RAG) et le fine-tuning pour personnaliser et optimiser vos modèles de langage, et choisissez la méthode la plus adaptée à vos besoins en intelligence artificielle.
+                            </p>
+
+                            <figure class="mt-12">
+                                <img class="w-full rounded-lg"
+                                     src="../html/images/blog/e5a6e1d8-85fa-4cd1-9c7f-b2f255a627c8.png"
+                                     alt="RAG vs Fine-Tuning"
+                                     width="1310"
+                                     height="873" />
+                                <figcaption class="mt-4 text-xs text-santa">
+                                    <span class="sr-only"> RAG vs Fine-Tuning </span>
+                                    RAG vs Fine-Tuning
+                                </figcaption>
+                            </figure>
+
+                            <h2 class="text-3xl text-white mt-12">Comprendre le RAG</h2>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Le RAG, ou Retrieval Augmented Generation, est une technique qui combine la récupération d'informations pertinentes avec la génération de texte. Voici un aperçu de ses principales caractéristiques :
+                            </p>
+
+                            <figure class="mt-12">
+                                <img class="w-full rounded-lg"
+                                     src="../html/images/blog/e5a6e1d8-85fa-4cd1-9c7f-b2f255a627c8.png"
+                                     alt="Diagramme du RAG (Retrieval Augmented Generation)"
+                                     width="1310"
+                                     height="873" />
+                                <figcaption class="mt-4 text-xs text-santa">
+                                    <span class="sr-only">Diagramme du RAG (Retrieval Augmented Generation)</span>
+                                    Diagramme du RAG (Retrieval Augmented Generation)
+                                </figcaption>
+                            </figure>
+
+                            <h3 class="text-xl text-white mt-12">Extraction et génération</h3>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Le RAG fonctionne en extrayant d'abord des informations pertinentes à partir d'une base de données ou d'un corpus de texte, puis en générant une réponse en utilisant ces informations. Cette approche permet de fournir des réponses précises et contextuellement riches en intégrant des données actualisées et spécifiques à la question posée.
+                            </p>
+
+                            <h3 class="text-xl text-white mt-12">Avantages du RAG</h3>
+                            <div class="mx-12 my-6">
+                                <ul role="list" class="text-base prose list-disc text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    <li><span class="font-bold">Contextualisation Améliorée :</span> Le RAG excelle dans les situations où la contextualisation est essentielle. Il peut rechercher et intégrer des informations récentes ou spécifiques pour fournir des réponses très pertinentes.</li>
+                                    <li><span class="font-bold">Flexibilité :</span> Le RAG peut être appliqué à des domaines variés sans nécessiter une modification importante du modèle sous-jacent, ce qui le rend adaptable à différents types de données et questions.</li>
+                                </ul>
+                            </div>
+
+                            <h3 class="text-xl text-white mt-12">Limites du RAG</h3>
+                            <div class="mx-12 my-6">
+                                <ul role="list" class="text-base prose list-disc text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    <li><span class="font-bold">Complexité :</span> La mise en œuvre du RAG nécessite une infrastructure capable de gérer à la fois la récupération de données et la génération de texte, ce qui peut être complexe et coûteux.</li>
+                                    <li><span class="font-bold">Dépendance aux Données Externes :</span> La qualité des réponses générées par le RAG dépend de la qualité et de la pertinence des données récupérées.</li>
+                                </ul>
+                            </div>
+
+                            <h2 class="text-3xl text-white mt-12">Comprendre le fine-tuning</h2>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Le fine-tuning, quant à lui, consiste à ajuster un modèle de langage pré-entraîné sur un ensemble de données spécifiques pour améliorer ses performances dans une tâche particulière. Voici ses principales caractéristiques :
+                            </p>
+
+                            <h3 class="text-xl text-white mt-12">Personnalisation et optimisation</h3>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Le fine-tuning permet de personnaliser un modèle de langage en le ré-entraînant sur des données spécifiques à une tâche ou à un domaine particulier. Cela permet au modèle d'apprendre des nuances et des spécificités qui ne sont pas présentes dans les données générales sur lesquelles il a été initialement entraîné.
+                            </p>
+
+                            <h3 class="text-xl text-white mt-12">Avantages du fine-tuning</h3>
+                            <div class="mx-12 my-6">
+                                <ul role="list" class="text-base prose list-disc text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    <li><span class="font-bold">Précision Accrue :</span> En ajustant le modèle sur des données spécifiques, le fine-tuning peut considérablement améliorer la précision des réponses pour des tâches particulières.</li>
+                                    <li><span class="font-bold">Simplicité :</span> Une fois les données préparées, le processus de fine-tuning est relativement simple et direct, nécessitant moins de modifications structurelles par rapport au RAG.</li>
+                                </ul>
+                            </div>
+
+                            <h3 class="text-xl text-white mt-12">Limites du fine-tuning</h3>
+                            <div class="mx-12 my-6">
+                                <ul role="list" class="text-base prose list-disc text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    <li><span class="font-bold">Données Spécifiques :</span> Le fine-tuning nécessite un ensemble de données spécifique et bien étiqueté pour être efficace, ce qui peut ne pas être toujours disponible.</li>
+                                    <li><span class="font-bold">Risque de surapprentissage :</span> Il existe un risque que le modèle devienne trop spécialisé dans les données de fine-tuning et perde sa capacité à généraliser sur de nouvelles données.</li>
+                                </ul>
+                            </div>
+
+                            <h2 class="text-3xl text-white mt-12">Comparaison : RAG vs. fine-tuning</h2>
+                            <h3 class="text-xl text-white mt-12">Quand utiliser le RAG ?</h3>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Besoin de contexte actualisé : Le RAG est idéal lorsque des informations à jour et spécifiques sont cruciales pour répondre à une question.
+                            </p>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Flexibilité et adaptabilité : Si vous avez besoin d'un système capable de s'adapter rapidement à différents types de requêtes et de domaines, le RAG est une excellente option.
+                            </p>
+
+                            <h3 class="text-xl text-white mt-12">Quand utiliser le fine-tuning ?</h3>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Précision sur des tâches spécifiques : Si votre objectif est d'optimiser un modèle pour une tâche ou un domaine très spécifique, le fine-tuning est la meilleure approche.
+                            </p>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Données disponibles : Lorsque vous disposez d'un ensemble de données bien structuré et pertinent pour le fine-tuning, cette méthode peut offrir des résultats très précis.
+                            </p>
+
+                            <h2 class="text-3xl text-white mt-12">Conclusion</h2>
+                            <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                Le choix entre RAG et fine-tuning dépend de vos besoins spécifiques en matière d'IA. Le RAG offre une flexibilité et une contextualisation améliorée, particulièrement utile pour des requêtes variées et contextuelles. Le fine-tuning, en revanche, permet d'atteindre une précision accrue pour des tâches spécifiques grâce à une personnalisation approfondie. En évaluant vos exigences en termes de données, de complexité et de spécificité des tâches, vous pourrez choisir la méthode la plus adaptée pour optimiser les performances de vos modèles d'intelligence artificielle.
+                            </p>
+                        </div>
+
+
+                        <div class="max-w-3xl mx-auto text-lg">
+                            <div class="pt-12">
+                                <span class="inline-flex justify-center w-full gap-3 lg:ml-auto md:justify-start md:w-auto">
+                                    <a class="transition duration-500 ease-in-out transform rounded-full text-santa hover:text-white">
+                                        <span class="sr-only"> Facebook</span>
+                                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="transition duration-500 ease-in-out transform rounded-full text-santa hover:text-white">
+                                        <span class="sr-only"> twitter</span>
+                                        <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="transition duration-500 ease-in-out transform rounded-full text-santa hover:text-white">
+                                        <span class="sr-only">Instagram</span>
+                                        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                        </svg>
+                                    </a>
+                                    <a class="transition duration-500 ease-in-out transform rounded-full text-santa hover:text-white">
+                                        <span class="sr-only">Linkedin</span>
+                                        <svg fill="currentColor"
+                                             stroke="currentColor"
+                                             stroke-linecap="round"
+                                             stroke-linejoin="round"
+                                             stroke-width="0"
+                                             class="w-5 h-5"
+                                             viewBox="0 0 24 24">
+                                            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                                            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                        </svg>
+                                    </a>
+                                    <a class="transition duration-500 ease-in-out transform rounded-full text-santa hover:text-white">
+                                        <span class="sr-only">Email</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                        </svg>
+                                    </a>
+                                    <a class="transition duration-500 ease-in-out transform rounded-full text-santa hover:text-white">
+                                        <span class="sr-only">Link</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                  d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                                  clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+    <section class="relative w-full">
+        <div class="relative items-center w-full px-5 pb-24 mx-auto md:px-12 lg:px-20 max-w-7xl">
+            <div class="flex w-full mx-auto text-left border-t border-b border-tuna">
+                <div class="relative py-12 m-auto align-middle">
+                    <div class="items-start gap-24 space-y-8 lg:inline-flex lg:space-y-0 max-w-7xl">
+                        <div class="text-left">
+                            <h1 class="mb-4 text-4xl font-bold leading-none text-white lg:text-4xl">
+                                The best
+                                <span class="text-iris"> design inspiration </span>
+                                expertly curated for you.
+                            </h1>
+                            <div class="max-w-lg">
+                                <p class="mb-6 text-xl font-light text-santa lg:mb-0">
+                                    Shadows is a blog on your browser and mobile app that instantly delivers relevant design stories and inspiration.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full max-w-md space-y-8 lg:mx-auto">
+                            <form class="mt-8 space-y-6 lg:mt-0" action="#" method="POST">
+                                <div class="relative px-3 py-2 border border-gray-300 rounded-xl focus-within:ring-1 focus-within:ring-majorelle focus-within:border-moody">
+                                    <label for="name" class="absolute inline-block px-1 -mt-px text-xs font-medium text-white bg-cinder -top-2 left-2">Email</label>
+                                    <input type="email"
+                                           name="name"
+                                           id="name"
+                                           class="block w-full py-1 text-white bg-transparent border-0 placeholder-river focus:ring-0 sm:text-sm"
+                                           placeholder="email@example.com" />
+                                </div>
+                                <div>
+                                    <button type="submit"
+                                            class="items-center block w-full px-8 py-3 mx-auto text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-majorelly lg:px-10 rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2">
+                                        Update me!
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-tuna bg-cinder" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="px-10 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
+            <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+                <div class="text-white xl:col-span-1">
+                    <span class="text-lg font-bold lg:text-2xl">
+                        <div class="inline-flex items-center">
+                            <img src="..\html\images\logo.webp" class="w-6 h-6 mr-2 " />
+                            Processia
+                        </div>
+                    </span>
+                    <p class="w-1/2 mt-0 text-sm text-santa">Amplifier l'humain</p>
+                    <a href="mailto:contact@processia.fr" class="w-1/2 mx-auto -4 text-sm text-santa">contact@processia.fr</a>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-8 mt-12 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Home</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="./index.html" class="text-base font-light text-santa hover:text-white"> Home </a>
+                                </li>
+                                <li>
+                                    <a href="./index.html#services" class="text-base font-light text-santa hover:text-white"> Services </a>
+                                </li>
+                                <li>
+                                    <a href="./index.html#team" class="text-base font-light text-santa hover:text-white"> L'équipe </a>
+                                </li>
+                                <li>
+                                    <a href="./blog.html" class="text-base font-light text-santa hover:text-white"> Blog </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Services</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./formations.html" class="text-base font-light text-santa hover:text-white"> Formation </a>
+                            </li>
+                            <li>
+                                <a href="./audit.html" class="text-base font-light text-santa hover:text-white"> Audit </a>
+                            </li>
+                            <li>
+                                <a href="./automatisation.html" class="text-base font-light text-santa hover:text-white"> Automatisation  </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Légal</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./privacy.html" class="text-base font-light text-santa hover:text-white"> Mentions légales & CGV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="border-t border-tuna bg-cinder">
+        <div class="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+            <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+                <a href="#" class="text-santa hover:text-white">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                              clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-sm text-center text-santa">
+                    Processia ©
+
+                    <span x-text="new Date().getFullYear()"></span>
+                    <span class="text-moody hover:text-white">YT DEVELOPPEMENT</span>
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
