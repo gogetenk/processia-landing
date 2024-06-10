@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en-US" style="scroll-behavior: smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Processia est une agence d'expertise en IA spécialisée dans l'automatisation des processus métiers et l'optimisation des performances via des solutions personnalisées d'intelligence artificielle.">
+    <meta name="keywords" content="IA, automatisation, optimisation, intelligence artificielle, transformation digitale, solutions IA">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://processia.fr">
+    <meta property="og:title" content="Processia - Automatisation et optimisation par l'IA">
+    <meta property="og:description" content="Decouvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui ameliorent l'efficacite et stimulent l'innovation.">
+    <meta property="og:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://processia.fr">
+    <meta property="twitter:title" content="Processia - Automatisation et optimisation par l'IA">
+    <meta property="twitter:description" content="Découvrez comment Processia peut transformer votre entreprise avec des solutions d'IA sur mesure qui améliorent l'efficacité et stimulent l'innovation.">
+    <meta property="twitter:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+
+    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="html/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Processia - Agence d'expertise en IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gradient-animate {
+            background: linear-gradient(to top right, #44E4FD, #DC49DD, #44E4FD, #DC49DD);
+            background-size: 400% 400%;
+            background-clip: text;
+            text-fill-color: transparent; /* For Safari */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientBackground 5s linear infinite;
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7V2SCSTR1C"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-7V2SCSTR1C');
+</script>
+<body class="bg-pearl">
+
+    <!-- Header -->
+    <header class="w-full text-gray-400 border-b bg-pearl border-cinder fixed z-10">
+        <div x-data="{ open: false }"
+             class="flex flex-col w-full py-2 px-10 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-screen-2xl">
+            <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+                <a href="https://processia.fr" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
+                    <div class="inline-flex items-center text-white">
+                        <img src=".\html\images\logo.webp" class="w-4 h-4 mr-2" />
+                        Processia
+                    </div>
+                </a>
+                <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+                    <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open"
+                              fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                              clip-rule="evenodd"></path>
+                        <path x-show="open"
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                              style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
+                <a title="Home"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="index.html">
+                    Home
+                </a>
+
+                <a title="Formation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="formations.html">
+                    Formation
+                </a>
+                <a title="Audit"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="audit.html">
+                    Audit
+                </a>
+                <a title="Automatisation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="automatisation.html">
+                    Automatisation
+                </a>
+                <a title="Blog"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="blog.html">
+                    Blog
+                </a>
+                <a href="#booking"
+                   title="Contact"
+                   class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+                    Contactez-nous
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-nero">
+        <div class="px-4 py-12 mx-auto">
+            <div class="max-w-4xl mx-auto lg:pt-24">
+                <div class="max-w-3xl mx-auto text-lg text-left">
+                    <div class="space-y-8">
+                        <h1 data-animate="title" class="py-10 text-4xl font-bold leading-none tracking-tighter text-center text-white lg:text-6xl">
+                            Hyper-Personnalisation avec l'IA chez Mister Hype
+                        </h1>
+
+                        <a href="#" class="flex-shrink-0 w-full mx-auto mt-12 text-left group">
+                            <div class="flex items-center justify-center mx-auto">
+                                <div>
+                                    <img class="inline-block rounded-full h-9 w-9"
+                                         src="./html/images/marius.jpg"
+                                         alt="" />
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-sm font-medium text-santa group-hover:text-white">Marius BRUNET</p>
+                                    <p class="text-xs font-medium text-santa group-hover:text-white">10 Mai 2024</p>
+                                </div>
+                            </div>
+                        </a>
+                        <p class="text-base text-center text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Découvrir combien de personnes ont consulté cette page
+                        </p>
+                    </div>
+
+                    <figure class="mt-12">
+                        <img class="w-full rounded-lg"
+                             src="./html/images/case-studies/barber.png"
+                             alt="Mister Hype"
+                             width="1310"
+                             height="873" />
+                        <figcaption class="mt-4 text-xs text-santa">
+                            <span class="sr-only">Mister Hype</span>
+                            Mister Hype.
+                        </figcaption>
+                    </figure>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Contexte et Objectifs du Projet</h2>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Mister Hype est un salon de coiffure nouvelle génération qui offre des prestations de coupe de cheveux tendances, de taille de barbe, de tatouage, ainsi que la vente de sneakers. Pour se démarquer de la concurrence et continuer à innover, Mister Hype a décidé de collaborer avec notre entreprise pour intégrer l'IA dans leurs services. Leur objectif principal est de créer une hyper-personnalisation du suivi client, permettant à chaque client de se sentir unique et bien conseillé, tout en comprenant mieux leurs besoins.
+                        </p>
+                    </div>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Détails Techniques et Fonctionnalités de l'IA</h2>
+                        <h3 class="text-2xl font-bold text-white mt-12">Fonctionnalités d'Hyper-Personnalisation</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Nous avons conçu un système basé sur l'IA pour offrir des recommandations personnalisées de produits, de sneakers et de tatouages en fonction des préférences et des besoins des clients. Le processus est le suivant :
+                        </p>
+                        <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc list-inside">
+                            <li><strong>Formulaire de Préférences :</strong> Les clients remplissent un formulaire détaillant leurs goûts, leurs besoins et leurs préférences en matière de produits et de styles.</li>
+                            <li><strong>Recommandations Personnalisées :</strong> Sur la base de ces informations, l'IA génère des recommandations personnalisées pour chaque client, permettant de composer un pack unique.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Types de Données Collectées</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Pour alimenter nos modèles IA, nous collectons diverses données :
+                        </p>
+                        <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc list-inside">
+                            <li><strong>Données des Rendez-Vous :</strong> Date, heure, type de service réservé.</li>
+                            <li><strong>Historique Client :</strong> Fréquence des visites, services précédemment utilisés.</li>
+                            <li><strong>Besoins et Préférences :</strong> Produits préférés, types de coiffures et styles de tatouages.</li>
+                            <li><strong>Goûts en Matière de Style :</strong> Préférences de mode, styles de sneakers favoris.</li>
+                        </ul>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Sécurité et Confidentialité des Données</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Les données collectées sont stockées de manière sécurisée, soit en interne, soit sur un cloud sécurisé. Nous utilisons des protocoles de cryptage avancés pour garantir la confidentialité et la sécurité des données des clients.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Technologies Utilisées</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Nous utilisons deux techniques principales pour nos recommandations :
+                        </p>
+                        <h4 class="text-xl font-bold text-white mt-12">Filtrage Collaboratif</h4>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Principe :</strong> Cette technique analyse les comportements similaires entre différents clients pour identifier des tendances et proposer des recommandations.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Implémentation :</strong> Nous avons développé des algorithmes qui analysent les historiques d'achats et de services des clients pour détecter des patrons communs. Par exemple, si plusieurs clients avec des goûts similaires aiment un certain type de produit, ce produit sera recommandé à un nouveau client ayant des préférences similaires.
+                        </p>
+
+                        <h4 class="text-xl font-bold text-white mt-12">Filtrage Basé sur le Contenu</h4>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Principe :</strong> Cette technique utilise les caractéristiques des produits (description, catégorie, etc.) et les préférences explicites des clients pour faire des recommandations.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Implémentation :</strong> Nous avons créé un algorithme qui associe les caractéristiques des produits avec les préférences des clients. Par exemple, si un client indique une préférence pour des tatouages de style géométrique, l'algorithme lui proposera des designs similaires.
+                        </p>
+
+                        <h4 class="text-xl font-bold text-white mt-12">Boucle de Rétroaction</h4>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Pour améliorer continuellement nos recommandations, nous avons mis en place une boucle de rétroaction qui intègre les nouvelles données et les préférences des clients. Cela permet à notre système d'IA de s'adapter et d'évoluer avec le temps, assurant ainsi une personnalisation toujours plus précise.
+                        </p>
+                    </div>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Processus d'Implémentation</h2>
+                        <h3 class="text-2xl font-bold text-white mt-12">Évaluation des Besoins et Objectifs</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 1 :</strong> Identification des Objectifs : Améliorer la satisfaction client, augmenter les ventes de produits, optimiser l'inventaire.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 2 :</strong> Analyse des Capacités Actuelles : Évaluation des systèmes actuels, comme les systèmes de point de vente et les bases de données clients, pour identifier les lacunes et besoins en termes d'outils d'IA.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Collecte et Préparation des Données</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 3 :</strong> Collecte des Données Clients : Utilisation de questionnaires, interactions en salon, et analyses d'historique de services pour enrichir la base de données clients.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 4 :</strong> Nettoyage et Préparation des Données : Élimination des doublons et incohérences, structuration des données pour une exploitation efficace par les algorithmes d'IA.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Développement et Implémentation des Algorithmes</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 5 :</strong> Choix des Techniques d'IA : Utilisation d'un modèle de filtrage collaboratif et un modèle de filtrage basé sur le contenu.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 6 :</strong> Développement des Algorithmes :
+                        </p>
+                        <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc list-inside">
+                            <li><strong>Filtrage Collaboratif :</strong> Algorithme qui analyse les comportements similaires entre différents clients.</li>
+                            <li><strong>Filtrage Basé sur le Contenu :</strong> Algorithme qui utilise les caractéristiques des produits et les préférences explicites des clients.</li>
+                        </ul>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 7 :</strong> Entraînement et Validation des Algorithmes : Utilisation des données collectées pour entraîner les algorithmes et validation de leur précision et fiabilité.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Intégration et Tests</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 8 :</strong> Intégration avec les Systèmes Existants : Intégration des algorithmes de recommandation dans le système de point de vente ou dans une application dédiée, avec une interface utilisateur intuitive.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 9 :</strong> Tests Pilotes : Réalisation de tests pilotes pour évaluer l'efficacité des systèmes de recommandation, avec collecte de retours d'expérience.
+                        </p>
+
+                        <h3 class="text-2xl font-bold text-white mt-12">Déploiement et Maintenance</h3>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 10 :</strong> Déploiement Complet : Déploiement à grande échelle dans tous les salons participants, avec formation du personnel.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 11 :</strong> Suivi et Maintenance : Surveillance de la performance des algorithmes et satisfaction des clients, avec mises à jour régulières.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            <strong>Étape 12 :</strong> Évaluation Continue et Amélioration : Évaluation continue de l'impact des systèmes de recommandation et implémentation des améliorations.
+                        </p>
+                    </div>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Impacts et Résultats Attendus</h2>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Les bénéfices anticipés pour les clients de Mister Hype incluent :
+                        </p>
+                        <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc list-inside">
+                            <li><strong>Satisfaction Accrue :</strong> Une expérience de salon plus personnalisée et satisfaisante.</li>
+                            <li><strong>Augmentation des Ventes :</strong> Recommandations de produits pertinentes favorisant l'upsell.</li>
+                            <li><strong>Différenciation Concurrentielle :</strong> Un service innovant qui distingue Mister Hype de la concurrence.</li>
+                        </ul>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Les indicateurs de performance suivis seront la satisfaction client et l'augmentation du chiffre d'affaires généré par les produits dérivés.
+                        </p>
+                    </div>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Expertise et Collaboration</h2>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Notre équipe :
+                        </p>
+                        <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc list-inside">
+                            <li><strong>Yannis :</strong> co-fondateur et développeur avec 15 ans d'expérience.</li>
+                            <li><strong>Marius :</strong> expert en IA et automaticien.</li>
+                        </ul>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Marius rédige les processus et modélise l'IA, tandis que Yannis intègre et développe l'environnement technique. Une demi-journée de formation est prévue pour le personnel de Mister Hype afin de garantir une adoption fluide de la nouvelle technologie.
+                        </p>
+                    </div>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Conclusion</h2>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            L'intégration de l'IA chez Mister Hype représente une avancée innovante sur l'île de la Réunion, montrant comment un salon de coiffure peut se transformer en utilisant des technologies de pointe pour offrir une expérience client exceptionnelle. Nous conseillons à d'autres entreprises souhaitant intégrer l'IA de définir clairement leurs objectifs et de collaborer étroitement avec des experts pour mener à bien leurs projets.
+                        </p>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Pour toute question ou pour discuter de la mise en œuvre de l'IA dans votre entreprise, n'hésitez pas à nous contacter.
+                        </p>
+                    </div>
+
+                    <blockquote class="p-12 my-24 shadow-thick rounded-xl bg-white">
+                        <p class="text-base text-transparent bg-gradient-to-tr bg-clip-text from-majorelly via-fandango to-flamingo sm:text-lg md:text-xl lg:text-2xl text-center font-semibold">
+                            Vous souhaitez améliorer votre gestion des stocks comme nous l'avons fait avec notre assistant GPT ? Parlons-en et explorons ensemble les solutions adaptées à vos besoins.
+                            <div class="rounded-lg sm:mt-0">
+                                <section class="flex w-full max-w-2xl gap-2 my-2t justify-center mx-auto lg:mt-12">
+                                    <div class="rounded-lg sm:mt-0">
+                                        <a href="#booking"
+                                           class="items-center block px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-majorelly lg:px-10 rounded-xl hover:bg-gov focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-thick hover:-translate-y-1 hover:scale-110">
+                                            Réserver une consultation de 30min
+                                        </a>
+                                    </div>
+                                </section>
+                            </div>
+                        </p>
+                    </blockquote>
+
+                    <div class="my-24 overflow-x-auto">
+                        <h2 class="text-3xl font-bold text-white">Tableau Comparatif : IA vs Main Humaine</h2>
+                        <table class="w-full text-base text-santa sm:text-lg md:mt-5 md:text-xl border-collapse border border-gray-500">
+                            <thead>
+                                <tr>
+                                    <th class="text-left p-4 border border-gray-500">Aspect</th>
+                                    <th class="text-left p-4 border border-gray-500">IA</th>
+                                    <th class="text-left p-4 border border-gray-500">Main Humaine</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="p-4 border border-gray-500">Vitesse</td>
+                                    <td class="p-4 border border-gray-500"><strong>Quelques minutes</strong></td>
+                                    <td class="p-4 border border-gray-500">Jours ou semaines</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-500">Précision</td>
+                                    <td class="p-4 border border-gray-500"><strong>Très précise</strong></td>
+                                    <td class="p-4 border border-gray-500">Variable, erreurs possibles</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-500">Coût</td>
+                                    <td class="p-4 border border-gray-500"><strong>Bas après mise en place</strong></td>
+                                    <td class="p-4 border border-gray-500">Élevé en salaires</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-500">Traitement des Données</td>
+                                    <td class="p-4 border border-gray-500"><strong>Grands volumes</strong></td>
+                                    <td class="p-4 border border-gray-500">Capacité humaine limitée</td>
+                                </tr>
+                                <tr>
+                                    <td class="p-4 border border-gray-500">Disponibilité</td>
+                                    <td class="p-4 border border-gray-500"><strong>24/7</strong></td>
+                                    <td class="p-4 border border-gray-500">Heures de travail</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="my-24">
+                        <h2 class="text-3xl font-bold text-white">Conclusion</h2>
+                        <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                            Cette étude montre que l'utilisation de l'assistant GPT s'est avérée efficace pour améliorer la gestion des stocks d'un grossiste en papeterie, en restructurant les données et en affinant la classification des produits et des clients. Les résultats obtenus mettent en évidence le potentiel de l'IA pour transformer les pratiques de gestion des stocks et optimiser les performances commerciales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section id="booking" class="relative w-full bg-gradient-to-tr from-[#44E4FD] via-[#DC49DD] to-[#DC49DD]">
+        <section class="relative w-full">
+            <div class="relative items-center w-full px-10 py-12 mx-auto md:pt-12 lg:px-16 max-w-7xl">
+                <div class="flex w-full mx-auto text-left lg:mt-16">
+                    <div class="relative inline-flex items-center m-auto align-middle">
+                        <div class="space-y-8 max-w-7xl lg:text-center">
+                            <div class="items-start text-left lg:inline-flex">
+                                <div class="lg:pr-16">
+                                    <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-white lg:text-5xl">Faisons connaissance</h1>
+                                </div>
+                                <div>
+                                    <p class="max-w-md mt-4 text-xl font-light text-white md:max-w-xl lg:mt-0">
+                                        30min de call découverte pour échanger sur vos besoins et vos projets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="relative items-center w-full px-5 pb-24 mx-auto md:px-12 lg:px-8 max-w-7xl">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/embed-demo-sales/discovery-call" style="position: relative;min-width:320px;height:800px;" data-processed="true">
+                <div class="calendly-spinner">
+                    <div class="calendly-bounce1"></div><div class="calendly-bounce2"></div>
+                    <div class="calendly-bounce3"></div>
+                </div><iframe src="https://calendly.com/yannis-tocreau/30min?embed_domain=www.calendly-embed.com&primary_color=4338ca&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
+            </div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async=""></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-tuna bg-cinder" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="px-10 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
+            <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+                <div class="text-white xl:col-span-1">
+                    <span class="text-lg font-bold lg:text-2xl">
+                        <div class="inline-flex items-center">
+                            <img src=".\html\images\logo.webp" class="w-6 h-6 mr-2 " />
+                            Processia
+                        </div>
+                    </span>
+                    <p class="w-1/2 mt-0 text-sm text-santa">Amplifier l'humain</p>
+                    <a href="mailto:contact@processia.fr" class="w-1/2 mx-auto -4 text-sm text-santa">contact@processia.fr</a>
+                </div>
+                <div class="grid grid-cols-1 xl:grid-cols-3 md:grid-cols-2 gap-8 mt-12 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-bold tracking-wider text-white uppercase">Home</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="./index.html" class="text-base font-light text-santa hover:text-white"> Home </a>
+                                </li>
+                                <li>
+                                    <a href="./index.html#services" class="text-base font-light text-santa hover:text-white"> Services </a>
+                                </li>
+                                <li>
+                                    <a href="./index.html#team" class="text-base font-light text-santa hover:text-white"> L'équipe </a>
+                                </li>
+                                <li>
+                                    <a href="./blog.html" class="text-base font-light text-santa hover:text-white"> Blog </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Services</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./formations.html" class="text-base font-light text-santa hover:text-white"> Formation </a>
+                            </li>
+                            <li>
+                                <a href="./audit.html" class="text-base font-light text-santa hover:text-white"> Audit </a>
+                            </li>
+                            <li>
+                                <a href="./automatisation.html" class="text-base font-light text-santa hover:text-white"> Automatisation  </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:mt-0">
+                        <h3 class="text-sm font-bold tracking-wider text-white uppercase">Légal</h3>
+                        <ul role="list" class="mt-4 space-y-4">
+                            <li>
+                                <a href="./privacy.html" class="text-base font-light text-santa hover:text-white"> Mentions légales & CGV</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="border-t border-tuna bg-cinder">
+        <div class="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+            <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+                <a href="#" class="text-santa hover:text-white">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                              d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                              clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-sm text-center text-santa">
+                    Processia ©
+
+                    <span x-text="new Date().getFullYear()"></span>
+                    <span class="text-moody hover:text-white">YT DEVELOPPEMENT</span>
+                    All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
