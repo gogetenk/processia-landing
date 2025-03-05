@@ -1,23 +1,34 @@
-const gulp = require("gulp");
-const del = require("del");
-const autoprefixer = require("autoprefixer");
-const hb = require("gulp-hb");
-const tailwindcss = require("tailwindcss");
-const postcss = require("gulp-postcss");
-const webpack = require("webpack-stream");
-const cssnano = require("cssnano");
-const postcssImport = require("postcss-import");
-const postCSSMixins = require("postcss-mixins");
-const postcssPresetEnv = require("postcss-preset-env");
-const browsersync = require("browser-sync");
-const hbLayouts = require("handlebars-layouts");
-const posthtml = require("gulp-posthtml");
-const posthtmlInlineAssets = require("posthtml-inline-assets");
-const minifyClassnames = require("posthtml-minify-classnames");
-const prettier = require("gulp-prettier");
+import gulp from 'gulp';
+import del from 'del';
+import autoprefixer from 'autoprefixer';
+import hb from 'gulp-hb';
+import tailwindcss from 'tailwindcss';
+import postcss from 'gulp-postcss';
+import webpack from 'webpack-stream';
+import cssnano from 'cssnano';
+import postcssImport from 'postcss-import';
+import postCSSMixins from 'postcss-mixins';
+import postcssPresetEnv from 'postcss-preset-env';
+import browsersync from 'browser-sync';
+import hbLayouts from 'handlebars-layouts';
+import posthtml from 'gulp-posthtml';
+import posthtmlInlineAssets from 'posthtml-inline-assets';
+import minifyClassnames from 'posthtml-minify-classnames';
+import prettier from 'gulp-prettier';
+import cache from 'gulp-cache';
+import imagemin from 'gulp-imagemin';
+import plumber from 'gulp-plumber';
+import notify from 'gulp-notify';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
 
-const isProduction = process.env.NODE_ENV === "prod";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
+const isProduction = process.env.NODE_ENV === "production";
+
+// Optimized paths configuration
 const paths = {
   dist: "./dist/",
   views: {
@@ -39,33 +50,31 @@ const paths = {
     watch: ["./src/css/**/*.css", "./src/**/*.{html,hbs}"]
   },
   fonts: {
-    src: "./src/fonts/**/*.{woff,woff2,eot,ttf,svg}",
+    src: "./src/fonts/**/*.{woff,woff2}",
     dist: "./dist/fonts/",
-    watch: "./src/fonts/**/*.{woff,woff2,eot,ttf,svg}"
+    watch: "./src/fonts/**/*.{woff,woff2}"
   },
   images: {
-    src: ["./src/images/**/*.{jpg,jpeg,png,gif,tiff,svg,webp}"],
+    src: ["./src/images/**/*.{jpg,jpeg,png,gif,svg,webp}"],
     dist: "./dist/images/",
-    watch: "./src/images/**/*.{jpg,jpeg,png,gif,svg,tiff,webp}"
+    watch: "./src/images/**/*.{jpg,jpeg,png,gif,svg,webp}"
   }
 };
 
-// -------------------------------------
-//   Task: clean
-// -------------------------------------
-gulp.task("clean", function () {
-  return del(paths.dist);
-});
-
-// -------------------------------------
-//   Task: postcss
-// -------------------------------------
-const pxtoremOptions = {
-  replace: true,
-  propList: ["font", "font-size", "line-height", "letter-spacing", "margin*", "padding*", "*width", "*height"],
-  mediaQuery: true
+// Error handling
+const errorHandler = function(title) {
+  return {
+    errorHandler: notify.onError({
+      title: title || "Build Error",
+      message: "Error: <%= error.message %>"
+    })
+  };
 };
 
+// Clean task with improved error handling
+const clean = () => del(paths.dist, { force: true });
+
+// Optimized PostCSS configuration
 const CSSplugins = [
   postcssImport,
   postCSSMixins,
@@ -73,157 +82,156 @@ const CSSplugins = [
     stage: 0,
     features: {
       "nesting-rules": true,
-      "color-mod-function": true,
       "custom-media": true
     }
   }),
   tailwindcss,
   autoprefixer,
   cssnano({
-    preset: [
-      "default",
-      {
-        discardComments: { removeAll: true }
-      }
-    ]
+    preset: ['default', {
+      discardComments: { removeAll: true },
+      normalizeWhitespace: false,
+      colormin: false,
+      zindex: false
+    }]
   })
 ];
 
-gulp.task("postcss", function () {
-  return gulp.src(paths.css.src).pipe(postcss(CSSplugins)).pipe(gulp.dest(paths.css.dist)).pipe(browsersync.stream());
-});
+// Optimized CSS task
+const styles = () => {
+  return gulp.src(paths.css.src)
+    .pipe(plumber(errorHandler("CSS Error")))
+    .pipe(postcss(CSSplugins))
+    .pipe(gulp.dest(paths.css.dist))
+    .pipe(browsersync.stream());
+};
 
-// -------------------------------------
-//   Task: JavaScript
-// -------------------------------------
-gulp.task("js", function () {
-  return gulp
-    .src(paths.js.src)
-    .pipe(
-      webpack({
-        config: isProduction ? require("./webpack.config.build.js") : require("./webpack.config.dev")
+// Optimized JS task
+const scripts = async () => {
+  const webpackConfig = isProduction ? 
+    (await import('./webpack.config.build.js')).default : 
+    (await import('./webpack.config.dev.js')).default;
+
+  return gulp.src(paths.js.src)
+    .pipe(plumber(errorHandler("JavaScript Error")))
+    .pipe(webpack({ config: webpackConfig }))
+    .pipe(gulp.dest(paths.js.dist))
+    .pipe(browsersync.stream());
+};
+
+// Optimized fonts task
+const fonts = () => {
+  return gulp.src(paths.fonts.src)
+    .pipe(plumber(errorHandler("Fonts Error")))
+    .pipe(gulp.dest(paths.fonts.dist));
+};
+
+// Optimized images task with caching
+const images = () => {
+  return gulp.src(paths.images.src)
+    .pipe(plumber(errorHandler("Image Error")))
+    .pipe(cache(imagemin([
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 80, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [
+          { removeViewBox: false },
+          { cleanupIDs: false }
+        ]
       })
-    )
-    .pipe(gulp.dest(paths.js.dist));
-});
+    ])))
+    .pipe(gulp.dest(paths.images.dist))
+    .pipe(browsersync.stream());
+};
 
-// -------------------------------------
-//   Task: fonts
-// -------------------------------------
-gulp.task("fonts", function () {
-  return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dist));
-});
-
-// -------------------------------------
-//   Task: images
-// -------------------------------------
-gulp.task("images", function () {
-  return gulp.src(paths.images.src).pipe(gulp.dest(paths.images.dist));
-});
-
-// -------------------------------------
-//   Task: views
-// -------------------------------------
-gulp.task("views", function () {
-  let hbStream = hb()
+// Optimized views task
+const views = () => {
+  const hbStream = hb()
     .partials(paths.views.layouts + "**/*.{hbs,html}")
     .partials(paths.views.partials + "**/*.{hbs,html}")
     .helpers(hbLayouts);
 
-  return gulp
-    .src(paths.views.src)
+  return gulp.src(paths.views.src)
+    .pipe(plumber(errorHandler("Template Error")))
     .pipe(hbStream)
     .pipe(prettier({ singleQuote: true }))
     .pipe(gulp.dest(paths.views.dist))
-    .on("end", browsersync.reload);
-});
+    .pipe(browsersync.stream());
+};
 
-// -------------------------------------
-//   Task: Copy
-// -------------------------------------
-gulp.task("copy-html", function () {
-  return gulp.src(paths.views.dist).pipe(gulp.dest("./html/"));
-});
-
-// -------------------------------------
-//   Task: mangle css classes
-// -------------------------------------
-gulp.task("mangleCSS", function () {
+// Optimized CSS class mangling for production
+const mangleCSS = () => {
   const transforms = {
     style: {
       resolve(node) {
-        node.tag === "link" && console.log(node.attrs.href);
-        node.tag === "link" && console.log(node.attrs.rel);
         return node.tag === "link" && node.attrs && node.attrs.rel === "stylesheet" && `${node.attrs.href}`;
       },
       transform(node, data) {
+        node.tag = "style";
+        node.content = [data.buffer.toString("utf8")];
         delete node.attrs.href;
         delete node.attrs.rel;
-
-        node.tag = "style";
-
-        node.content = [data.buffer.toString("utf8")];
       }
-    },
-    script: undefined,
-    image: undefined
+    }
   };
-  const filter =
-    /^\.(flex|hidden|dark|transition|transform|esase-in|ease-out|duration-100|duration-150|opacity-0|opacity-100|scale-95|scale-100|translate-y-0|-translate-y-full|shadow-md|)$/;
 
-  const plugins = [posthtmlInlineAssets({ transforms }), minifyClassnames({ filter })];
+  const filter = /^\.(flex|hidden|dark|transition|transform|ease-in|ease-out|duration-|opacity-|scale-|translate-|shadow-)/;
+  const plugins = [
+    posthtmlInlineAssets({ transforms }),
+    minifyClassnames({ filter })
+  ];
 
-  return gulp.src(["dist/*.html"]).pipe(posthtml(plugins)).pipe(gulp.dest(paths.dist));
-});
+  return gulp.src(["dist/*.html"])
+    .pipe(plumber(errorHandler("Mangle CSS Error")))
+    .pipe(posthtml(plugins))
+    .pipe(gulp.dest(paths.dist));
+};
 
-// -------------------------------------
-//   Tast: server
-// -------------------------------------
-gulp.task("server", function (done) {
+// Optimized development server
+const serve = (done) => {
   browsersync.init({
     server: "./dist/",
     port: 4000,
-    notify: true,
-    open: false
+    notify: false,
+    open: false,
+    ui: false,
+    ghostMode: false,
+    reloadOnRestart: true
   });
-  gulp.watch([paths.views.watch], { usePolling: true }, gulp.parallel("views"));
-  gulp.watch(paths.css.watch, { usePolling: true }, gulp.parallel("postcss"));
-  gulp.watch(paths.images.watch, { usePolling: true }, gulp.parallel("images"));
-  gulp.watch(paths.js.watch, { usePolling: true }, gulp.parallel("js"));
-  return done();
-});
 
-// -------------------------------------
-//   Tast: Dev warning
-// -------------------------------------
-gulp.task("dev-warning", function (done) {
-  console.log("");
-  console.log("⚠️  Run 'npm run build' first to process assets and generate the /dist folder first!! ⚠️");
-  console.log("");
-  return done();
-});
+  // Optimized watch tasks with debounce
+  const watchOptions = { usePolling: true, delay: 100 };
+  gulp.watch(paths.views.watch, watchOptions, views);
+  gulp.watch(paths.css.watch, watchOptions, styles);
+  gulp.watch(paths.images.watch, watchOptions, images);
+  gulp.watch(paths.js.watch, watchOptions, scripts);
 
-// -------------------------------------
-//   Task: dev
-// -------------------------------------
-gulp.task("dev", gulp.series("dev-warning", "server"));
+  done();
+};
 
-// -------------------------------------
-//   Task: build
-// -------------------------------------
-gulp.task("build", gulp.series("clean", gulp.parallel("postcss", "fonts", "images", "js", "views")));
+// Export tasks
+export {
+  clean,
+  styles as css,
+  scripts as js,
+  fonts,
+  images,
+  views,
+  mangleCSS,
+  serve
+};
 
-// -------------------------------------
-//   Task: build-demo
-// -------------------------------------
-gulp.task("build-demo", gulp.series("build", "mangleCSS"));
+// Build task
+export const build = gulp.series(
+  clean,
+  gulp.parallel(styles, scripts, fonts, images, views),
+  mangleCSS
+);
 
-// -------------------------------------
-//   Task: build-demo
-// -------------------------------------
-gulp.task("build-html", gulp.series("build", "copy-html"));
-
-// -------------------------------------
-//   Task: default
-// -------------------------------------
-gulp.task("default", gulp.series("build", "server"));
+// Default task
+export default gulp.series(
+  clean,
+  gulp.parallel(styles, scripts, fonts, images, views),
+  serve
+);

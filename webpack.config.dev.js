@@ -1,13 +1,10 @@
-const { merge } = require("webpack-merge");
-const path = require("path");
+import { merge } from 'webpack-merge';
+import path from 'path';
+import baseConfig from './webpack.config.js';
 
-const config = require("./webpack.config");
-
-module.exports = merge(config, {
-  mode: "development",
-
-  devtool: "source-map",
-
+export default merge(baseConfig, {
+  mode: 'development',
+  devtool: 'eval-source-map',
   devServer: {
     writeToDisk: true
   }
