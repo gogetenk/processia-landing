@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HBBDKSTSJP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HBBDKSTSJP');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXDSS6S9');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Processia propose des formations en IA pour le milieu professionnel. Apprenez à maîtriser l'intelligence artificielle et à l'intégrer dans votre environnement de travail.">
+    <meta name="keywords" content="IA, formation, intelligence artificielle, milieu professionnel, conférences IA, ateliers IA">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://processia.fr/formation-ia.html">
+    <meta property="og:title" content="Processia - L'IA dans le milieu professionnel">
+    <meta property="og:description" content="Des conférences interactives et des ateliers pratiques pour maîtriser l'intelligence artificielle dans votre environnement professionnel.">
+    <meta property="og:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://processia.fr/formation-ia.html">
+    <meta property="twitter:title" content="Processia - L'IA dans le milieu professionnel">
+    <meta property="twitter:description" content="Des conférences interactives et des ateliers pratiques pour maîtriser l'intelligence artificielle dans votre environnement professionnel.">
+    <meta property="twitter:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+
+    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="html/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Processia - L'IA dans le milieu professionnel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <style>
+        @keyframes gradientBackground {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .gradient-animate {
+            background: linear-gradient(to top right, #44E4FD, #DC49DD, #44E4FD, #DC49DD);
+            background-size: 400% 400%;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientBackground 5s linear infinite;
+        }
+
+        .hero-gradient-1 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom left, rgba(255, 107, 107, 0.2), rgba(162, 89, 255, 0.2), transparent);
+            opacity: 0.3;
+        }
+
+        .hero-gradient-2 {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 66.666667%;
+            height: 66.666667%;
+            background: linear-gradient(to top left, rgba(255, 107, 107, 0.3), rgba(162, 89, 255, 0.2), transparent);
+            border-radius: 9999px;
+            filter: blur(4rem);
+        }
+
+        .img-gradient {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            border-radius: 9999px;
+            background: linear-gradient(to right, rgba(255, 107, 107, 0.2), rgba(162, 89, 255, 0.3), var(--background));
+            filter: blur(4rem);
+            z-index: -10;
+        }
+
+        .method-card {
+            background-color: var(--card-bg, #0c0c1d);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            transition: border-color 0.2s;
+        }
+
+        .method-card:hover {
+            border-color: rgba(162, 89, 255, 0.5);
+        }
+
+        .method-icon {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 9999px;
+            background-color: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card {
+            background-color: var(--card-bg, #0c0c1d);
+            border-radius: 0.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+        }
+
+        /* Carousel custom styles */
+        .carousel {
+            max-width: 100%;
+            margin: 0 auto;
+        }
+
+        .carousel-item {
+            height: auto;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-indicators [data-bs-target] {
+            background-color: rgba(255, 255, 255, 0.7);
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin: 0 4px;
+        }
+
+        .carousel-control-prev, .carousel-control-next {
+            background: rgba(0, 0, 0, 0.3);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: 0 10px;
+        }
+
+        .carousel-control-prev {
+            left: 10px;
+        }
+
+        .carousel-control-next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body class="bg-pearl">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXDSS6S9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="w-full text-gray-400 border-b bg-pearl border-cinder fixed z-10">
+        <div x-data="{ open: false }"
+             class="flex flex-col w-full py-2 px-10 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-screen-2xl">
+            <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+                <a href="https://processia.fr" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
+                    <div class="inline-flex items-center text-white">
+                        <img src=".\html\images\logo.webp" class="w-4 h-4 mr-2" />
+                        Processia
+                    </div>
+                </a>
+                <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+                    <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open"
+                              fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                              clip-rule="evenodd"></path>
+                        <path x-show="open"
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                              style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
+                <a title="Home"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="index.html">
+                    Home
+                </a>
+
+                <a title="Formation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="formations.html">
+                    Formation
+                </a>
+                <a title="Audit"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="audit.html">
+                    Audit
+                </a>
+                <a title="Automatisation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="automatisation.html">
+                    Automatisation
+                </a>
+                <a title="Blog"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="blog.html">
+                    Blog
+                </a>
+                <a href="#contact"
+                   title="Contact"
+                   class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+                    Me contacter 🚀
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 md:pt-0 w-full min-h-screen lg:py-20 bg-[#050010] flex-col md:flex items-center justify-center">
+        <div class="absolute inset-0 z-0">
+            <div class="hero-gradient-1"></div>
+            <div class="hero-gradient-2"></div>
+        </div>
+
+        <div class="relative items-center w-full px-10 md:px-12 lg:px-16 lg:py-32 max-w-screen-2xl z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="mb-4 text-3xl lg:mb-6 lg:text-4xl font-bold leading-none text-white lg:text-5xl">
+                    L’IA : <span class="gradient-animate">compétence clé</span> pour les étudiants d’aujourd’hui
+                    </h1>
+                    <p class="mt-6 text-lg text-white text-opacity-80">
+                        Offrez à vos étudiants une conférence <span class="gradient-animate">immersive</span> pour comprendre, expérimenter et maîtriser l’intelligence artificielle dans leur futur métier.
+                    </p>
+                    <div class="flex w-full max-w-2xl gap-2 mt-6 lg:gap-4 lg:mt-8">
+                        <a href="#contact" class="px-8 py-3 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-gradient-to-r from-[#DC49DD] to-[#44E4FD] lg:px-10 rounded-xl hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 shadow-thick">
+                            🎤 Organiser une conférence
+                        </a>
+                        <a href="#methodology" class="px-8 py-2.5 text-base font-medium text-center text-white transition duration-500 ease-in-out transform border-2 border-white rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white hover:bg-white hover:text-[#050010] shadow-thick">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div id="carouselExampleIndicators" class="carousel slide rounded-xl overflow-hidden shadow-lg" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="html\images\carrousel1.png" class="d-block w-100 rounded-xl" alt="IA Formation Image 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="html\images\carroussel2.png" class="d-block w-100 rounded-xl" alt="IA Formation Image 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="html\images\carroussel3.png" class="d-block w-100 rounded-xl" alt="IA Formation Image 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="html\images\carroussel4.png" class="d-block w-100 rounded-xl" alt="IA Formation Image 4">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="img-gradient"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="relative w-full">
+        <div class="relative items-center w-full px-10 py-12 mx-auto lg:py-32 md:px-12 lg:px-16 max-w-7xl">
+            <div class="flex w-full mx-auto text-left">
+                <div class="relative inline-flex items-center m-auto align-middle">
+                    <div class="max-w-3xl space-y-8 lg:text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white">La méthodologie : apprendre l’IA autrement                        </h2>
+                        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                            📌 Des formats interactifs. Une immersion totale.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="method-card">
+                    <div class="method-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #DC49DD;">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">✅ WhatsApp privé</h3>
+                    <p class="text-gray-400">Un suivi direct et personnalisé avec les étudiants.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #44E4FD;">
+                            <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">🤖 Chatbot IA</h3>
+                    <p class="text-gray-400">Un assistant intelligent pour répondre aux questions à tout moment.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #DC49DD;">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">🎤 Conférences dynamiques</h3>
+                    <p class="text-gray-400">Sessions interactives pour maximiser l’engagement.</p>
+                </div>
+                <div class="method-card">
+                    <div class="method-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #44E4FD;">
+                            <rect x="2" y="6" width="20" height="12" rx="2" ry="2"></rect>
+                            <path d="M12 12h.01"></path>
+                            <path d="M17 12h.01"></path>
+                            <path d="M7 12h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-white">📊 Supports visuels impactants"</h3>
+                    <p class="text-gray-400">Slides enrichis et visuels marquants pour mieux retenir.</p>
+                </div>
+            </div>
+            <div class="mt-10 text-center">
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Conference Section -->
+    <section class="relative w-full bg-cinder">
+        <div class="relative items-center w-full px-10 py-12 mx-auto lg:py-32 md:px-12 lg:px-16 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Ils ont déjà vécu l’expérience IA</h2>
+                    <div class="mt-8 p-6 rounded-xl bg-pearl border border-tuna">
+                        <div class="flex items-center gap-3 mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-[#44E4FD]">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            <h3 class="text-xl font-bold text-white">12/03/2025</h3>
+                        </div>
+
+                        <ul class="space-y-3 text-gray-300">
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#DC49DD] font-bold">•</span>
+                                <span>
+                                    <strong>Lieu :</strong> IUT Clermont-Ferrand
+                                </span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#DC49DD] font-bold">•</span>
+                                <span>
+                                    <strong>Durée :</strong> 1h30 (45 min de conférence + 45 min d'atelier)
+                                </span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#DC49DD] font-bold">•</span>
+                                <span>
+                                    <strong>Participants :</strong> Étudiants de 1re et 2e années, professeurs
+                                </span>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#DC49DD] font-bold">•</span>
+                                <span>
+                                👥 98 participants engagés
+                                </span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-[#DC49DD] font-bold">•</span>
+                                <span>
+                                    <strong>💡 Une immersion totale dans l’IA.</strong><br>
+                                    Des étudiants captivés. Des échanges enrichissants. Une compréhension concrète de l’intelligence artificielle appliquée aux métiers de demain.<br><br>
+                                    <strong>🔥 Et si votre campus était le prochain ?</strong>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <img
+                        src="html\images\conf-iut1.svg"
+                        alt="Conférence IUT Clermont-Ferrand"
+                        class="rounded-lg object-cover h-full w-full"
+                    />
+                    <img
+                        src="html\images\conf-iut3.svg"
+                        alt="Atelier IA"
+                        class="rounded-lg object-cover h-full w-full"
+                    />
+                    <img
+                        src="html\images\conf-iut2.svg"
+                        alt="Participants"
+                        class="rounded-lg object-cover h-full w-full"
+                    />
+                    <div class="rounded-lg bg-gradient-to-br from-[#44E4FD] via-[#DC49DD] to-[#DC49DD] p-6 flex items-center justify-center">
+                        <p class="text-xl font-bold text-center text-white">98 participants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="relative w-full">
+        <div class="relative items-center w-full px-10 py-12 mx-auto lg:py-32 md:px-12 lg:px-16 max-w-7xl">
+            <div class="flex w-full mx-auto text-left">
+                <div class="relative inline-flex items-center m-auto align-middle">
+                    <div class="max-w-3xl space-y-8 lg:text-center">
+                        <h2 class="text-3xl md:text-4xl font-bold text-white">Ils en parlent mieux que moi</h2>
+                        <p class="mt-4 text-gray-400 max-w-2xl mx-auto">
+                            Nos conférences laissent une empreinte durable sur les étudiants et enseignants.<br> Voici ce qu’ils en pensent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#DC49DD] to-[#44E4FD] flex items-center justify-center text-white font-bold text-xl">
+                            M
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-white">Timéo V.</h3>
+                            <p class="text-sm text-gray-400">Étudiant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Très bien, une très bonne idée avec le WhatsApp pour les personnes plus timides. Des suggestions de IA etc très bien, bravo"
+                    </p>
+                    <div class="flex mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#44E4FD] to-[#DC49DD] flex items-center justify-center text-white font-bold text-xl">
+                            T
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-white">Loïse de S.</h3>
+                            <p class="text-sm text-gray-400">Étudiant</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "J'ai adoré, ça m'a donner une autre vision de l'IA, c'était très intéressant"<br><br>
+                    </p>
+                    <div class="flex mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#44E4FD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#44E4FD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#44E4FD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#44E4FD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#44E4FD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#DC49DD] to-[#44E4FD] flex items-center justify-center text-white font-bold text-xl">
+                            S
+                        </div>
+                        <div class="ml-4">
+                            <h3 class="text-lg font-bold text-white">Anne M.</h3>
+                            <p class="text-sm text-gray-400">Professeure</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">
+                        "Vivant ! (surtout les étudiants)"<br><br><br>
+                    </p>
+                    <div class="flex mt-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#DC49DD" class="mr-1">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="relative w-full bg-cinder">
+        <div class="relative items-center w-full px-10 py-12 mx-auto lg:py-32 md:px-12 lg:px-16 max-w-7xl">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white">Prévoyons votre conférence</h2>
+                    <p class="mt-4 text-gray-400">
+                        Vous souhaitez organiser une conférence sur l'IA dans votre entreprise ou votre établissement ? 
+                        Contactez-nous pour discuter de vos besoins et obtenir un devis personnalisé.
+                    </p>
+
+                    <div class="mt-8 space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#DC49DD] to-[#44E4FD] flex items-center justify-center text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Téléphone</h3>
+                                <p class="text-gray-300">+33 6 95 92 91 50</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-full bg-gradient-to-r from-[#DC49DD] to-[#44E4FD] flex items-center justify-center text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Email</h3>
+                                <p class="text-gray-300">contactprocessia@gmail.com.fr</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-pearl p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-white mb-6">Contactez-moi pour en discuter 🚀</h3>
+                    <div class="bg-pearl p-8 rounded-xl">
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/mariusbrunet25/30min" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w-full bg-pearl py-12">
+        <div class="max-w-7xl mx-auto px-10 md:px-12 lg:px-16">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="md:col-span-2">
+                    <a href="https://processia.fr" class="inline-flex items-center text-white text-xl font-semibold mb-4">
+                        <img src=".\html\images\logo.webp" class="w-6 h-6 mr-2" />
+                        Processia
+                    </a>
+                    <p class="text-gray-400 mt-2 max-w-md">
+                        Processia accompagne les entreprises dans leur transformation numérique et l'intégration de l'intelligence artificielle dans leurs processus métier.
+                    </p>
+                    <div class="flex mt-6 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="formations.html" class="text-gray-400 hover:text-white">Formation</a></li>
+                        <li><a href="audit.html" class="text-gray-400 hover:text-white">Audit</a></li>
+                        <li><a href="automatisation.html" class="text-gray-400 hover:text-white">Automatisation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Conseil</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Liens utiles</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Accueil</a></li>
+                        <li><a href="blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-tuna mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400"> 2023 Processia. Tous droits réservés.</p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Politique de confidentialité</a>
+                        <a href="#" class="text-gray-400 hover:text-white text-sm">Mentions légales</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('toggle-methods');
+            const additionalMethods = document.getElementById('additional-methods');
+            const toggleText = document.getElementById('toggle-text');
+            const toggleIconDown = document.getElementById('toggle-icon-down');
+            const toggleIconUp = document.getElementById('toggle-icon-up');
+            
+            toggleButton.addEventListener('click', function() {
+                if (additionalMethods.style.display === 'none') {
+                    additionalMethods.style.display = 'grid';
+                    toggleText.textContent = 'Voir moins';
+                    toggleIconDown.style.display = 'none';
+                    toggleIconUp.style.display = 'inline';
+                } else {
+                    additionalMethods.style.display = 'none';
+                    toggleText.textContent = 'Voir plus';
+                    toggleIconDown.style.display = 'inline';
+                    toggleIconUp.style.display = 'none';
+                }
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
