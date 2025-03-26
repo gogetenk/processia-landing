@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HBBDKSTSJP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HBBDKSTSJP');
+</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NXDSS6S9');</script>
+     <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- Primary Meta Tags -->
+    <meta name="description" content="Découvrez comment l'IA générative révolutionne votre communication digitale, augmente la performance de vos campagnes marketing et dynamise votre créativité.">
+    <meta name="keywords" content="IA générative, communication digitale, marketing, automatisation, stratégie digitale">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://processia.fr/blog/ia-generative-communication-digitale.html">
+    <meta property="og:title" content="Comment l'IA Générative Révolutionne votre Communication Digitale ? - Processia">
+    <meta property="og:description" content="Découvrez comment l'IA générative révolutionne votre communication digitale, augmente la performance de vos campagnes marketing et dynamise votre créativité.">
+    <meta property="og:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://processia.fr/blog/ia-generative-communication-digitale.html">
+    <meta property="twitter:title" content="Comment l'IA Générative Révolutionne votre Communication Digitale ? - Processia">
+    <meta property="twitter:description" content="Découvrez comment l'IA générative révolutionne votre communication digitale, augmente la performance de vos campagnes marketing et dynamise votre créativité.">
+    <meta property="twitter:image" content="https://processia.fr/html/images/fb-og-sm.webp">
+
+    <link rel="icon" href="https://processia.fr/html/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../html/css/app.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Comment l'IA Générative Révolutionne votre Communication Digitale ? - Processia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pearl">
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXDSS6S9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header class="w-full text-gray-400 border-b bg-pearl border-cinder fixed z-10">
+        <div x-data="{ open: false }"
+             class="flex flex-col w-full py-2 px-10 mx-auto bg-bunker md:items-center md:justify-between md:flex-row md:px-6 lg:px-16 max-w-screen-2xl">
+            <div class="flex flex-row items-center justify-between py-2 lg:py-0">
+                <a href="https://processia.fr" class="text-lg font-semibold rounded-lg focus:outline-none focus:shadow-outline">
+                    <div class="inline-flex items-center text-white">
+                        <img src="..\html\images\logo.webp" class="w-4 h-4 mr-2" />
+                        Processia
+                    </div>
+                </a>
+                <button class="md:hidden focus:outline-none" @click="open = !open" aria-label="hidden">
+                    <svg fill="#ffffff" viewBox="0 0 20 20" class="w-6 h-6">
+                        <path x-show="!open"
+                              fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                              clip-rule="evenodd"></path>
+                        <path x-show="open"
+                              fill-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              clip-rule="evenodd"
+                              style="display: none"></path>
+                    </svg>
+                </button>
+            </div>
+            <nav :class="{'flex': open, 'hidden': !open}" class="flex-col items-center flex-grow hidden px-5 md:pb-0 md:flex md:justify-end md:flex-row">
+                <a title="Home"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-auto hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="../index.html">
+                    Home
+                </a>
+
+                <a title="Formation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="../formations.html">
+                    Formation
+                </a>
+                <a title="Conférences"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="../conferences-ia.html">
+                    Conférences
+                </a>
+                <a title="Audit"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="../audit.html">
+                    Audit
+                </a>
+                <a title="Automatisation"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="../automatisation.html">
+                    Automatisation
+                </a>
+                <a title="Blog"
+                   class="px-4 py-2 mt-2 text-base transition duration-500 ease-in-out transform bg-transparent rounded-lg text-magnesium lg:text-base md:mt-0 md:ml-4 hover:text-white focus:text-white hover:bg-pearl focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2"
+                   href="../blog.html">
+                    Blog
+                </a>
+                <a href="#booking"
+                   title="Contact"
+                   class="px-8 py-2 mt-2 text-base text-white transition duration-500 ease-in-out transform rounded-lg bg-cinder md:mt-0 md:ml-4 focus:text-moody hover:bg-tuna focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-thick">
+                    Contactez-nous
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bg-nero">
+        <div class="px-4 py-12 mx-auto">
+            <div class="max-w-4xl mx-auto lg:pt-24">
+
+                <div class="max-w-3xl mx-auto text-lg text-left">
+                    <div class="space-y-8">
+                        <div class="container mx-auto px-4 py-10">
+                            <h1 data-animate="title" class="py-10 text-4xl font-bold leading-none tracking-tighter text-center text-white lg:text-6xl">
+                                Comment l'IA Générative Révolutionne Votre Communication Digitale ?
+                            </h1>
+
+                            <a href="#" class="flex-shrink-0 w-full mx-auto mt-12 text-left group">
+                                <div class="flex items-center justify-center mx-auto">
+                                    <div>
+                                        <img class="inline-block rounded-full h-9 w-9"
+                                             src="..\html\images\marius.webp"
+                                             alt="" />
+                                    </div>
+                                    <div class="ml-3">
+                                        <p class="text-sm font-medium text-santa group-hover:text-white">Marius BRUNET</p>
+                                        <p class="text-xs font-medium text-santa group-hover:text-white">20 mars 2025</p>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <p class="text-base text-center text-santa sm:text-lg md:mt-5 md:text-xl">
+                                En 2023, plus de 75% des entreprises ayant intégré l'IA générative dans leur stratégie digitale ont constaté une amélioration significative du ROI. Face à cette révolution numérique, les marques n'ont plus le choix : soit embrasser ces avancées technologiques, soit prendre le risque de décroître.
+                            </p>
+
+                            <figure class="mt-6">
+                                <img class="w-full rounded-lg"
+                                     src="../html\images\blog\articles-seo.png"
+                                     alt="L'IA générative dans la communication digitale"
+                                     width="1310"
+                                     height="873" />
+                                <figcaption class="mt-4 text-xs text-santa">
+                                    <span class="sr-only">L'IA générative dans la communication digitale</span>
+                                    L'IA générative comme outil stratégique de communication
+                                </figcaption>
+                            </figure>
+
+                            <div class="container mx-auto p-4 prose">
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    <em>"Et si l'IA générative vous faisait gagner 80% de temps dans la création de contenus tout en augmentant leur impact sur votre audience ?"</em>
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Dans cet article, je vous révèle exactement comment l'IA générative impacte votre communication digitale, améliore vos performances marketing et vous offre un avantage concurrentiel décisif.
+                                </p>
+
+                                <h2 class="text-3xl text-white mt-6">Comprendre l'Impact Macro-économique de l'IA Générative sur la Communication Digitale</h2>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    La montée en puissance de l'IA générative redéfinit les codes traditionnels de la communication digitale. Selon Gartner (rapport prévisionnel, 2023), 30% du contenu numérique sera produit par l'IA à l'horizon 2025. Cette transformation technologique repose principalement sur la capacité de ces intelligences artificielles à générer rapidement du contenu pertinent et personnalisé, permettant ainsi aux entreprises de se concentrer sur leur cœur de métier.
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Contrairement aux idées reçues, l'utilisation intensive de l'IA générative ne réduit pas l'authenticité d'un message mais agit plutôt comme un catalyseur d'idées et de différenciation.
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Ainsi, replacer l'humain au cœur des tâches à forte valeur ajoutée tout en automatisant les processus répétitifs deviendra bientôt une norme incontournable.
+                                </p>
+
+                                <h2 class="text-3xl text-white mt-6">Comment l'IA Générative Optimise Concrètement Votre Stratégie de Communication Digitale ?</h2>
+
+                                <h3 class="text-2xl text-white mt-8">➤ Augmenter la productivité de votre équipe éditoriale</h3>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Produire du contenu de qualité de manière régulière représente un défi temporel pour toute entreprise. Pour y répondre, l'IA générative intervient en tant qu'assistante éditoriale avancée.
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Par exemple, Hubspot révélait en décembre 2022 que leur équipe éditoriale génère jusqu'à 60% plus de contenu en qualité et quantité grâce à l'outil Jasper AI.
+                                </p>
+                                <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc pl-6">
+                                    <li>Étape 1 : Définir clairement votre guideline éditorial.</li>
+                                    <li>Étape 2 : Programmer l'IA générative pour produire des brouillons rapides.</li>
+                                    <li>Étape 3 : Opérer une relecture humaine minutieuse pour assurer la cohérence.</li>
+                                </ul>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Vigilance : rester attentif à la qualité et la véracité du contenu généré ; une supervision humaine demeure indispensable.
+                                </p>
+
+                                <h3 class="text-2xl text-white mt-8">➤ Personnaliser votre diffusion à grande échelle</h3>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Grâce à l'IA générative, la personnalisation massive devient non seulement possible, mais simple et rapide.
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Netflix personnalise aujourd'hui près de 80% de ses suggestions titulaires grâce à un modèle d'IA génératif développé spécifiquement à cet effet (rapport TechCrunch, 2023). Cela a permis une augmentation significative des taux d'engagement.
+                                </p>
+                                <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc pl-6">
+                                    <li>Identifier les profils-types de votre audience.</li>
+                                    <li>Utiliser une IA générative comme GPT-4 ou Claude pour générer des variantes personnalisées.</li>
+                                    <li>Tester, affiner, puis diffuser automatiquement le contenu adapté à chaque segment.</li>
+                                </ul>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Point sensible : attention à la sur-personnalisation pouvant parfois être perçue comme intrusive.
+                                </p>
+
+                                <h3 class="text-2xl text-white mt-8">➤ Concevoir des visuels impactants facilement</h3>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Créer des images originales, rapidement et efficacement demeure un atout compétitif majeur, notamment sur les réseaux sociaux.
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Adobe Firefly, lancé en mars 2023, exploite la puissance de l'IA générative pour produire des visuels professionnels adaptés au contexte et au message voulu.
+                                </p>
+                                <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc pl-6">
+                                    <li>Saisir une description détaillée de votre besoin visuel dans l'outil d'IA générative.</li>
+                                    <li>Valider ou ajuster en temps réel les propositions générées.</li>
+                                    <li>Publier instantanément un visuel unique et attractif.</li>
+                                </ul>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Avertissement : maintenir une ligne graphique cohérente avec votre charte visuelle existante est essentiel.
+                                </p>
+                                
+                                <div class="bg-tuna p-6 rounded-lg mt-8 mb-8 flex justify-center">
+                                    <a href="#booking" class="inline-block px-8 py-4 text-base font-medium text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-[#44E4FD] to-[#DC49DD] hover:from-[#DC49DD] hover:to-[#44E4FD] focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-lg hover:shadow-xl">Réserver un appel gratuit de 30 minutes</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ajout des sections manquantes -->
+    <section class="bg-nero">
+        <div class="px-4 py-3 mx-auto">
+            <div class="max-w-4xl mx-auto">
+                <div class="max-w-3xl mx-auto text-lg text-left">
+                    <div class="space-y-4">
+                        <div class="container mx-auto px-4 py-3">
+                            <div class="container mx-auto p-4 prose">
+                                <h2 class="text-3xl text-white mt-4">Implémentez une Automatisation Intelligente pour votre Communication Digitale avec l'IA Générative</h2>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Pour tirer pleinement avantage de l'IA générative, il est primordial de combiner automatisation brute et intervention humaine stratégique.
+                                </p>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl">
+                                    Voici un workflow performant et testé :
+                                </p>
+                                <p class="text-base text-white sm:text-lg md:mt-5 md:text-xl">
+                                    <strong class="text-white">Schéma :</strong> Brief initial → GPT-4 → Validation humaine → Automatisation avec Make → Diffusion sur réseaux sociaux
+                                </p>
+                                <p class="text-base text-white sm:text-lg md:mt-5 md:text-xl">
+                                    <strong class="text-white">Atouts :</strong> Scalabilité, qualité humaine préservée, cohérence garantie.
+                                </p>
+                                <p class="text-base text-white sm:text-lg md:mt-5 md:text-xl">
+                                    <strong class="text-white">Résultats observés :</strong> Chez nos clients, nous avons enregistré des gains de 40% d'efficacité et une hausse moyenne de 37% d'engagement sur leurs contenus digitaux (cas interne, juillet 2023).
+                                </p>
+
+                                <h2 class="text-3xl text-white mt-4">Préparez Votre Communication Digitale à l'Avenir : Intégrez dès Maintenant l'IA Générative</h2>
+                                <ul class="text-base text-white sm:text-lg md:mt-5 md:text-xl list-disc pl-6">
+                                    <li>L'IA générative est déjà incontournable et deviendra bientôt un standard universel.</li>
+                                    <li>Elle améliore radicalement votre productivité, personnalisation et impact visuel.</li>
+                                    <li>Toute stratégie gagnante combine intelligemment IA générative et touche humaine.</li>
+                                </ul>
+                                <p class="text-base text-santa sm:text-lg md:mt-5 md:text-xl font-bold">
+                                    Vous souhaitez accélérer cette révolution numérique dans votre entreprise ?
+
+                                <div class="bg-tuna p-6 rounded-lg mt-8 mb-8 flex justify-center">
+                                    <a href="#booking" class="inline-block px-8 py-4 text-base font-medium text-white transition duration-500 ease-in-out transform rounded-lg bg-gradient-to-r from-[#44E4FD] to-[#DC49DD] hover:from-[#DC49DD] hover:to-[#44E4FD] focus:outline-none focus:shadow-outline focus:ring-2 ring-offset-current ring-offset-2 shadow-lg hover:shadow-xl">Réserver un appel gratuit de 30 minutes</a>
+                                </div>
+
+                                <h3 class="text-xl text-white mt-8">Sources :</h3>
+                                <ul class="text-base text-santa sm:text-lg md:mt-5 md:text-xl list-disc pl-6">
+                                    <li>McKinsey, rapport 2023 sur l'impact de l'IA générative sur le ROI des entreprises</li>
+                                    <li>Gartner, rapport prévisionnel 2023 sur l'adoption de l'IA dans la création de contenu</li>
+                                    <li>TechCrunch, étude de cas Netflix 2023 sur la personnalisation par IA</li>
+                                    <li>Hubspot, rapport interne décembre 2022 sur l'utilisation de Jasper AI</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to action -->
+    <section id="booking" class="relative w-full bg-gradient-to-tr from-[#44E4FD] via-[#DC49DD] to-[#DC49DD]">
+        <section class="relative w-full">
+            <div class="relative items-center w-full px-10 py-12 mx-auto md:pt-12 lg:px-16 max-w-7xl">
+                <div class="flex w-full mx-auto text-left lg:mt-16">
+                    <div class="relative inline-flex items-center m-auto align-middle">
+                        <div class="space-y-8 max-w-7xl lg:text-center">
+                            <div class="items-start text-left lg:inline-flex">
+                                <div class="lg:pr-16">
+                                    <h1 class="max-w-5xl text-2xl font-bold leading-none tracking-tighter text-white lg:text-5xl">Faisons connaissance</h1>
+                                </div>
+                                <div>
+                                    <p class="max-w-md mt-4 text-xl font-light text-white md:max-w-xl lg:mt-0">
+                                        30min de call découverte pour échanger sur vos besoins et vos projets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="relative items-center w-full px-5 pb-24 mx-auto md:px-12 lg:px-8 max-w-7xl">
+            <!-- Calendly inline widget begin -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/mariusbrunet25/30min" style="position: relative; min-width:320px; height:700px;" data-processed="true">
+                <div class="calendly-spinner">
+                    <div class="calendly-bounce1"></div><div class="calendly-bounce2"></div>
+                    <div class="calendly-bounce3"></div>
+                </div>
+                <iframe src="https://calendly.com/mariusbrunet25/30min?embed_domain=www.calendly-embed.com&primary_color=4338ca&amp;embed_type=Inline" width="100%" height="100%" frameborder="0" title="Select a Date &amp; Time - Calendly"></iframe>
+            </div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Calendly inline widget end -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-tuna bg-cinder" aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="px-10 py-12 mx-auto max-w-7xl sm:px-6 lg:px-12 lg:py-24">
+            <div class="xl:grid xl:grid-cols-2 xl:gap-8">
+                <div class="text-white xl:col-span-1">
+                    <span class="text-lg font-bold lg:text-2xl">
+                        <div class="inline-flex items-center">
+                            <img src="..\html\images\logo.webp" class="w-6 h-6 mr-2 " />
+                            Processia
+                        </div>
+                    </span>
+                    <p class="w-1/2 mt-0 text-sm text-santa">Amplifier l'humain</p>
+                    <a href="mailto:contact@processia.fr" class="w-1/2 mx-auto -4 text-sm text-santa">contact@processia.fr</a>
+                </div>
+                <div class="grid grid-cols-1 gap-12 py-12">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-xs font-semibold tracking-wider text-santa uppercase">Solutions</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="../formations.html" class="text-base text-santa hover:text-white"> Formation </a>
+                                </li>
+
+                                <li>
+                                    <a href="../conferences-ia.html" class="text-base text-santa hover:text-white"> Conférences </a>
+                                </li>
+
+                                <li>
+                                    <a href="../audit.html" class="text-base text-santa hover:text-white"> Audit </a>
+                                </li>
+
+                                <li>
+                                    <a href="../automatisation.html" class="text-base text-santa hover:text-white"> Automatisation </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mt-12 md:mt-0">
+                            <h3 class="text-xs font-semibold tracking-wider text-santa uppercase">Support</h3>
+                            <ul role="list" class="mt-4 space-y-4">
+                                <li>
+                                    <a href="../mentions-legales.html" class="text-base text-santa hover:text-white"> Mentions légales </a>
+                                </li>
+
+                                <li>
+                                    <a href="../politique-confidentialite.html" class="text-base text-santa hover:text-white"> Politique de confidentialité </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="border-t border-tuna bg-cinder">
+        <div class="px-5 py-12 mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-20">
+            <div class="flex justify-center mb-8 space-x-6 md:order-last md:mb-0">
+                <a href="#" class="text-santa hover:text-white">
+                    <span class="sr-only">GitHub</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                <a href="#" class="text-santa hover:text-white">
+                    <span class="sr-only">Twitter</span>
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+                    </svg>
+                </a>
+            </div>
+            <div class="mt-8 md:mt-0 md:order-1">
+                <p class="text-base text-center text-santa">&copy; 2025 Processia, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
