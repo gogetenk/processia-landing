@@ -1,0 +1,4 @@
+[build]
+  # Désactiver le processus de build
+  publish = "."
+  command = ""
