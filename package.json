@@ -7,8 +7,6 @@
     "start": "echo 'Site HTML statique - aucun serveur de développement nécessaire'"
   },
   "author": "Processia",
-  "dependencies": {},
-  "devDependencies": {},
   "engines": {
     "node": ">=16.0.0"
   }
